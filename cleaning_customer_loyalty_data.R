@@ -1,3 +1,5 @@
+install.packages("janitor")
+library(janitor)
 library(moments)
 library(dplyr)
 library(tidyverse)
@@ -8,19 +10,27 @@ history <- read.csv("customer_loyalty_history.csv", stringsAsFactors = FALSE)
 
 View(history)
 
-colnames(history) <- tolower(colnames(history))
-history <- history %>% rename(loyalty_number = loyalty.number)
-history <- history %>% rename(postal_code = postal.code)
-history <- history %>% rename(marital_status = marital.status)
-history <- history %>% rename(loyalty_card = loyalty.card)
-history <- history %>% rename(enrollment_type = enrollment.type)
-history <- history %>% rename(enrollment_year = enrollment.year)
-history <- history %>% rename(enrollment_month = enrollment.month)
-history <- history %>% rename(cancellation_year = cancellation.year)
-history <- history %>% rename(cancellation_month = cancellation.month)
+# change column names to lowercase and snakecase
+history <- clean_names(history)
 
-##To Do:
-##change column names to lowercase and snakecase
-##change NA to 0 or NULL
-##remove spaces from the postal codes
-##check for skew, but it doesn't look like we'll need to normalize
+# change NA to 0 or NULL
+history[is.na(history)] <- 0
+
+# remove spaces from the postal codes
+history$postal_code <- gsub(" ", "", history$postal_code)                         
+                    
+# check for skew, but it doesn't look like we'll need to normalize
+check_skewness <- function(history) {
+  sapply(history, function(col) if (is.numeric(col)) skewness(col, na.rm = TRUE) else NA)
+}
+
+# clv is positively skewed >3
+# salary is positively skewed = 1.2
+history$clv <- log1p(history$clv)
+history$salary <- sqrt(log1p(history$salary))
+
+# sqrt transformation resulted warning message: NaNs
+# checking how many 0s are in column
+summary(history$salary) # there are 20 0s
+
+
