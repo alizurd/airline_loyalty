@@ -18,8 +18,11 @@ history[is.na(history)] <- 0
 
 # remove spaces from the postal codes
 history$postal_code <- gsub(" ", "", history$postal_code)                         
-                    
-# check for skew, but it doesn't look like we'll need to normalize
+                
+# at this point i want to download data and explore in bigquery
+write.csv(history, "loyalty_history.csv", na = "")
+    
+# check for skew
 check_skewness <- function(history) {
   sapply(history, function(col) if (is.numeric(col)) skewness(col, na.rm = TRUE) else NA)
 }
