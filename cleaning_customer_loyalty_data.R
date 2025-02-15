@@ -17,7 +17,15 @@ history <- clean_names(history)
 history[is.na(history)] <- 0
 
 # remove spaces from the postal codes
-history$postal_code <- gsub(" ", "", history$postal_code)                         
+history$postal_code <- gsub(" ", "", history$postal_code)
+
+# making columns numeric
+str(history)
+history$loyalty_number <- as.numeric(history$loyalty_number)
+history$salary <- as.numeric(history$salary)
+history$clv <- as.numeric(history$clv)
+history$enrollment_year <- as.numeric(history$enrollment_year)
+history$enrollment_month <- as.numeric(history$enrollment_month)
                 
 # at this point i want to download data and explore in bigquery
 write.csv(history, "loyalty_history.csv", na = "")
