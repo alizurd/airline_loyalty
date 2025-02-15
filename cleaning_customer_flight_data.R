@@ -3,17 +3,12 @@ library(tidyverse)
 library(dplyr)
 library(moments)
 
-setwd("/Users/alyssabueno/Desktop/airline_dataset")
+setwd("/Users/alyssabueno/Desktop/airline_loyalty")
 flights <- read.csv("customer_flight_activity.csv", stringsAsFactors = FALSE)
 View(flights)
 
 ##changing column names
-colnames(flights) <- tolower(colnames(flights))
-flights <- flights %>% rename(loyalty_number = loyalty.number)
-flights <- flights %>% rename(total_flights = total.flights)
-flights <- flights %>% rename(points_accumulated = points.accumulated)
-flights <- flights %>% rename(points_redeemed = points.redeemed)
-flights <- flights %>% rename(dollar_cost_points_redeemed = dollar.cost.points.redeemed)
+flights <- clean_names(flights)
 
 ##checking the data types in each column
 str(flights)
@@ -27,6 +22,9 @@ flights$points_accumulated <- as.numeric(flights$points_accumulated)
 flights$points_redeemed <- as.numeric(flights$points_redeemed)
 flights$dollar_cost_points_redeemed <- as.numeric(flights$dollar_cost_points_redeemed)
 flights$year <- as.numeric(flights$year)
+
+#download as csv
+write.csv(flights, "flights.csv", na = "")
 
 #check for outliers
 summary(flights)
