@@ -23,6 +23,9 @@ flights$points_redeemed <- as.numeric(flights$points_redeemed)
 flights$dollar_cost_points_redeemed <- as.numeric(flights$dollar_cost_points_redeemed)
 flights$year <- as.numeric(flights$year)
 
+flights <- flights %>%
+  filter(points_redeemed <= points_accumulated) # filter out rows where points_redeemed > points_accumulated
+
 #download as csv
 write.csv(flights, "flights.csv", na = "")
 
