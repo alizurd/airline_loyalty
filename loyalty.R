@@ -35,8 +35,6 @@ history <- history %>%
          loyalty_card = as.factor(loyalty_card),
          enrollment_type = as.factor(enrollment_type))
 
-
-
 # making columns numeric
 str(history)
 history$loyalty_number <- as.numeric(history$loyalty_number)
