@@ -56,4 +56,6 @@ select
 count(distinct case when salary < 0 then loyalty_number end) as broke_people
 from `airline.loyalty_history`;
 
-
+-- next steps from zero
+-- uuuhh so far in my head i like have it set up that i have a client and so im summarizing the data and where the program is now then using ML to  able to predict the CLV and potentially enrollment period of customers based off of the different factors in the data??
+-- I have a strong feeling i can predict enrollment and cancellation peaks by visualizing the data (not to mention its only 2 years long anyhow)
