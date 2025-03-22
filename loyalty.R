@@ -46,7 +46,7 @@ history$enrollment_month <- as.numeric(history$enrollment_month)
 history$salary <- abs(history$salary) # changing the negative salary values positive
                 
 # at this point i want to download data and explore in bigquery
-write.csv(history, "loyalty_history.csv", na = "")
+write.csv(history, "cleaned_loyalty.csv", na = "")
     
 # Transformation
 
