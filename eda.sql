@@ -1,3 +1,14 @@
+-- median of clv by marital_status
+select
+distinct marital_status
+,median_clv
+from (
+  select
+  marital_status
+  ,percentile_cont(clv, 0.5) over (partition by marital_status) as median_clv
+from `airline.loyalty_history`)
+order by 2
+
 --average clv by city
 select 
 avg(clv) as average_clv
