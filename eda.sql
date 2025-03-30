@@ -67,6 +67,23 @@ select
 count(distinct case when salary < 0 then loyalty_number end) as broke_people
 from `airline.loyalty_history`;
 
+-- JOIN -> removal of int64_field_0, int64_field_0_1 and loyalty_number_1 done in R
+--file name = all_together_now
+SELECT *,
+ FORMAT("%04d-%02d", Enrollment_Month, Enrollment_Year) AS Enrollment_Date,
+  CASE
+    WHEN Cancellation_Year IS NULL OR Cancellation_Year = 0 
+      OR Cancellation_Month IS NULL OR Cancellation_Month =0 
+      THEN 'Not Cancelled'
+    ELSE CONCAT(
+      (Cancellation_Year - Enrollment_Year), ' years, ',
+      ((Cancellation_Year - Enrollment_Year) * 12 + (Cancellation_Month - Enrollment_Month)), ' months'
+    )
+  END AS Enrollment_Period,
+FROM `airline.flight_activity` AS Flight_Activity
+JOIN `airline.loyalty_history` AS Loyalty_History 
+  ON Flight_Activity.Loyalty_Number = Loyalty_History.Loyalty_number
+
 -- next steps from zero
 -- uuuhh so far in my head i like have it set up that i have a client and so im summarizing the data and where the program is now then using ML to  able to predict the CLV and potentially enrollment period of customers based off of the different factors in the data??
 -- I have a strong feeling i can predict enrollment and cancellation peaks by visualizing the data (not to mention its only 2 years long anyhow)
