@@ -71,7 +71,7 @@ joined <- joined %>%
   filter (salary != 0) %>%
   drop_na()
 
-joined$postal_code <- gsub(" ", "", history$postal_code) # remove spaces from the postal codes
+joined$postal_code <- gsub(" ", "", joined$postal_code) # remove spaces from the postal codes
 
 
 
