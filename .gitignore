@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+
+# RStudio junk
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Python/R Jupyter files (just in case)
+.ipynb_checkpoints/
+
+# Environment / package tracking
+renv/library/
+renv/python/
+
+# Raw and processed data
+data/
+*.csv
+*.rds
+*.xlsx
+
+# Model output
+output/
+*.sav
+*.model
+*.RData
+
+# Plots & images (if large)
+figures/
+
+# Logs or temp files
+*.log
+*.tmp
+*.bak
