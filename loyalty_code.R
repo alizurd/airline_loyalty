@@ -44,10 +44,10 @@ history$enrollment_year <- as.numeric(history$enrollment_year)
 history$enrollment_month <- as.numeric(history$enrollment_month)
 
 history$salary <- abs(history$salary) # changing the negative salary values positive
-                
+
 # at this point i want to download data and explore in bigquery
 write.csv(history, "cleaned_loyalty.csv", na = "")
-    
+
 # Transformation
 
 # visual inspection
@@ -77,7 +77,7 @@ print(zero_rows)
 
 history <- history %>% 
   filter(salary != 0) # filtering out rows where salary = 0
-         
+
 View(history)
 
 # training data 70% train, 30% test
@@ -112,5 +112,3 @@ test_data$pred_prob <- predict(log_model, newdata = history, type = "response")
 head(history)
 colSums(is.na(history))
 str(history)
-
-
