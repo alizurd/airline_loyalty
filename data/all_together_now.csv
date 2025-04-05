@@ -1,0 +1,501 @@
+int64_field_0,loyalty_number,year,month,total_flights,distance,points_accumulated,points_redeemed,dollar_cost_points_redeemed,int64_field_0_1,loyalty_number_1,country,province,city,postal_code,gender,education,salary,marital_status,loyalty_card,clv,enrollment_type,enrollment_year,enrollment_month,cancellation_year,cancellation_month,Enrollment_Date,Enrollment_Period
+1,100590,2018,6,1.601545927,9.634103708,10.039547,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+2,100590,2018,7,1.601545927,9.123583508,9.529012261,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+3,100590,2018,5,1.268636241,8.780326391,9.185740255,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+4,100590,2018,2,0,0,0,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+5,100590,2018,4,0,0,0,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+6,100590,2018,3,0,0,0,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+7,100590,2018,8,0,0,0,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+8,100590,2018,9,0,0,0,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+9,100590,2018,11,0,0,0,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+10,100590,2018,12,0,0,0,0,0,5755,100590,Canada,British Columbia,Vancouver,V6E3Z3,Female,Bachelor,69841,Married,Star,34090.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+11,102376,2018,6,1.794122578,9.962558026,10.36800742,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+12,102376,2018,12,1.665109222,9.711176264,10.11662117,6.32256524,4.615120517,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+13,102376,2018,7,1.601545927,10.12986587,10.53531768,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+14,102376,2018,8,1.601545927,8.757940877,9.163353581,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+15,102376,2018,9,1.394958834,8.916371915,9.321792297,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+16,102376,2018,5,1.268636241,7.997326823,8.402679805,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+17,102376,2018,2,0,0,0,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+18,102376,2018,3,0,0,0,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+19,102376,2018,4,0,0,0,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+20,102376,2018,10,0,0,0,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+21,102376,2018,11,0,0,0,0,0,8168,102376,Canada,Ontario,Sudbury,M5V1G5,Male,College,0,Single,Aurora,12765.78,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+22,102788,2018,7,1.744855993,10.112167,10.51761858,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+23,102788,2018,5,1.683215181,10.22734484,10.63279789,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+24,102788,2018,8,1.683215181,10.2748097,10.68026331,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+25,102788,2018,12,1.665109222,10.24444969,10.64990295,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+26,102788,2018,9,1.394958834,9.063578991,9.469005495,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+27,102788,2018,3,1.338566199,9.130322664,9.535751661,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+28,102788,2018,10,1.268636241,8.53640741,8.941807118,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+29,102788,2018,11,1.048147074,8.099554282,8.504918161,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+30,102788,2018,2,0,0,0,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+31,102788,2018,4,0,0,0,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+32,102788,2018,6,0,0,0,0,0,14638,102788,Canada,Quebec,Montreal,H2T2J6,Male,Bachelor,31170,Single,Nova,11124.21,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+33,104267,2018,5,1.683215181,10.39723823,10.80269316,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+34,104267,2018,12,1.517427129,9.595466709,10.00090914,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+35,104267,2018,6,1.482303807,8.802221746,9.20763672,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+36,104267,2018,4,1.177410023,8.056426768,8.461786184,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+37,104267,2018,11,1.048147074,8.375860015,8.781248333,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+38,104267,2018,2,0,0,0,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+39,104267,2018,3,0,0,0,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+40,104267,2018,7,0,0,0,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+41,104267,2018,8,0,0,0,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+42,104267,2018,9,0,0,0,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+43,104267,2018,10,0,0,0,0,0,10925,104267,Canada,Ontario,Sudbury,M5V1G5,Male,Bachelor,28642,Married,Star,2701.04,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+44,105063,2018,6,1.601545927,9.836118362,10.24156564,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+45,105063,2018,11,1.482303807,9.339349053,9.744784861,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+46,105063,2018,5,1.268636241,8.371242136,8.776630098,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+47,105063,2018,4,1.177410023,8.748939632,9.154351862,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+48,105063,2018,2,0,0,0,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+49,105063,2018,3,0,0,0,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+50,105063,2018,7,0,0,0,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+51,105063,2018,8,0,0,0,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+52,105063,2018,9,0,0,0,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+53,105063,2018,10,0,0,0,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+54,105063,2018,12,0,0,0,0,0,15585,105063,Canada,Quebec,Montreal,H4G3T4,Male,Doctor,236405,Divorced,Star,7251.33,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+55,105073,2018,7,1.744855993,9.23415455,9.639587109,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+56,105073,2018,12,1.517427129,8.813438495,9.218854028,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+57,105073,2018,5,1.482303807,9.401373869,9.80681144,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+58,105073,2018,6,1.268636241,8.023879993,8.429235913,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+59,105073,2018,9,1.268636241,8.757940877,9.163353581,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+60,105073,2018,10,1.268636241,7.62900389,8.034306936,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+61,105073,2018,4,1.177410023,8.113726086,8.519091389,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+62,105073,2018,2,0,0,0,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+63,105073,2018,3,0,0,0,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+64,105073,2018,8,0,0,0,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+65,105073,2018,11,0,0,0,0,0,7809,105073,Canada,Ontario,Toronto,M2M6J7,Male,College,0,Single,Aurora,7562.82,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+66,105835,2018,6,1.601545927,8.922791624,9.328212293,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+67,105835,2018,10,1.482303807,9.276970454,9.682404377,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+68,105835,2018,11,1.394958834,9.260367866,9.665801266,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+69,105835,2018,5,1.268636241,8.996280439,9.401704257,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+70,105835,2018,12,1.177410023,7.834788107,8.240121298,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+71,105835,2018,9,1.048147074,7.821242084,8.226573475,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+72,105835,2018,2,0,0,0,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+73,105835,2018,3,0,0,0,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+74,105835,2018,4,0,0,0,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+75,105835,2018,7,0,0,0,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+76,105835,2018,8,0,0,0,0,0,11335,105835,Canada,Ontario,Toronto,M8Y4K8,Male,Bachelor,41085,Married,Star,4756.13,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+77,105841,2018,6,1.794122578,10.41370299,10.81915809,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+78,105841,2018,7,1.744855993,10.28878397,10.69423774,6.259581464,4.553876892,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+79,105841,2018,12,1.517427129,9.052750451,9.458176536,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+80,105841,2018,9,1.482303807,9.544595868,9.950037113,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+81,105841,2018,11,1.394958834,9.143666239,9.549095715,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+82,105841,2018,2,1.177410023,8.56902634,8.974428147,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+83,105841,2018,4,1.048147074,8.365672384,8.771059915,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+84,105841,2018,3,0.8325546112,7.491645474,7.896924656,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+85,105841,2018,5,0,0,0,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+86,105841,2018,8,0,0,0,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+87,105841,2018,10,0,0,0,0,0,4922,105841,Canada,British Columbia,Whistler,V6T1Y8,Male,Bachelor,55130,Married,Star,17420.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+88,106046,2018,6,1.744855993,10.71843192,11.12388965,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+89,106046,2018,12,1.517427129,9.570668634,9.976110494,5.983936281,4.276666119,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+90,106046,2018,9,1.482303807,9.845063632,10.25051107,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+91,106046,2018,7,1.268636241,8.696343057,9.101752432,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+92,106046,2018,8,1.268636241,9.16711967,9.572549971,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+93,106046,2018,10,1.048147074,8.102586425,8.50795061,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+94,106046,2018,4,0.8325546112,7.307202315,7.712443834,6.306275287,4.59511985,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+95,106046,2018,2,0,0,0,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+96,106046,2018,3,0,0,0,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+97,106046,2018,5,0,0,0,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+98,106046,2018,11,0,0,0,0,0,15198,106046,Canada,Quebec,Montreal,H2T9K8,Male,Bachelor,16628,Single,Star,2658.22,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+99,107519,2018,5,1.683215181,10.08451661,10.48996781,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+100,107519,2018,7,1.683215181,10.1378084,10.54326033,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+101,107519,2018,8,1.601545927,9.531626452,9.937067386,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+102,107519,2018,9,1.394958834,9.230241034,9.635673465,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+103,107519,2018,10,1.394958834,9.555276687,9.960718186,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+104,107519,2018,4,1.268636241,8.712266432,9.117676687,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+105,107519,2018,3,0.8325546112,7.530479995,7.93576626,6.21860012,4.510859507,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+106,107519,2018,2,0,0,0,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+107,107519,2018,6,0,0,0,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+108,107519,2018,11,0,0,0,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+109,107519,2018,12,0,0,0,0,0,12881,107519,Canada,Quebec,Hull,J8Y3Z5,Female,Bachelor,71792,Married,Aurora,5470.06,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+110,110065,2018,7,1.8350193,11.08498466,11.49044465,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+111,110065,2018,5,1.744855993,10.02928285,10.43473326,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+112,110065,2018,6,1.683215181,9.303557454,9.708992195,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+113,110065,2018,12,1.601545927,9.311542252,9.716977235,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+114,110065,2018,9,1.482303807,9.451638134,9.857077055,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+115,110065,2018,11,1.394958834,8.774776816,9.180190395,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+116,110065,2018,8,1.268636241,8.943375541,9.348797115,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+117,110065,2018,10,1.048147074,7.762596049,8.167919363,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+118,110065,2018,4,0.8325546112,7.506042179,7.911324019,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+119,110065,2018,2,0,0,0,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+120,110065,2018,3,0,0,0,0,0,1967,110065,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,82365,Single,Aurora,13432,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+121,110142,2018,6,1.744855993,10.5278472,10.93330338,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+122,110142,2018,7,1.744855993,9.993373959,10.39882383,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+123,110142,2018,8,1.683215181,10.19260609,10.59805872,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+124,110142,2018,5,1.482303807,8.897408865,9.302828391,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+125,110142,2018,3,1.338566199,8.538171598,8.943571421,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+126,110142,2018,10,1.268636241,9.05450494,9.459931093,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+127,110142,2018,2,0,0,0,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+128,110142,2018,9,0,0,0,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+129,110142,2018,11,0,0,0,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+130,110142,2018,12,0,0,0,0,0,1269,110142,Canada,British Columbia,Vancouver,V6E3D9,Male,College,0,Single,Star,4866.65,2018 Promotion,2018,2,2018,10,0002-2018,"0 years, 8 months"
+131,110262,2018,5,1.683215181,10.26927584,10.67472939,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+132,110262,2018,12,1.665109222,10.08522561,10.49067682,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+133,110262,2018,11,1.394958834,9.182660803,9.588091642,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+134,110262,2018,6,1.268636241,8.965590067,9.371012597,6.11368218,4.406719247,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+135,110262,2018,10,1.048147074,8.347353412,8.752739509,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+136,110262,2018,2,0.8325546112,6.490723535,6.895682698,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+137,110262,2018,4,0.8325546112,7.17395832,7.579167967,5.880532986,4.17438727,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+138,110262,2018,3,0,0,0,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+139,110262,2018,7,0,0,0,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+140,110262,2018,8,0,0,0,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+141,110262,2018,9,0,0,0,0,0,202,110262,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,52267,Married,Aurora,9427.68,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+142,112522,2018,7,1.744855993,10.47053282,10.87598847,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+143,112522,2018,5,1.482303807,9.1902397,9.595670798,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+144,112522,2018,9,1.394958834,8.07059354,8.475954443,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+145,112522,2018,8,1.268636241,7.805067044,8.210396255,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+146,112522,2018,4,1.177410023,8.922791624,9.328212293,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+147,112522,2018,12,1.177410023,8.652597828,9.058004711,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+148,112522,2018,3,1.048147074,7.898411093,8.303752416,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+149,112522,2018,10,1.048147074,6.936342736,7.341483852,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+150,112522,2018,11,1.048147074,7.267525428,7.672757897,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+151,112522,2018,2,0,0,0,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+152,112522,2018,6,0,0,0,0,0,70,112522,Canada,Alberta,Peace River,T9O2W2,Male,Bachelor,49846,Married,Aurora,5636.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+153,113874,2018,7,1.744855993,10.76850604,11.17396413,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+154,113874,2018,12,1.517427129,9.865837605,10.27128541,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+155,113874,2018,3,1.268636241,7.721791777,8.127109185,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+156,113874,2018,5,1.268636241,7.934871566,8.340217321,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+157,113874,2018,4,1.177410023,8.485908901,8.891305222,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+158,113874,2018,11,1.048147074,7.660585462,8.065893547,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+159,113874,2018,2,0,0,0,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+160,113874,2018,6,0,0,0,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+161,113874,2018,8,0,0,0,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+162,113874,2018,9,0,0,0,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+163,113874,2018,10,0,0,0,0,0,8578,113874,Canada,Ontario,Toronto,M2M7K8,Female,College,0,Single,Nova,2894.24,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+164,114131,2018,6,1.683215181,10.03455967,10.44001016,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+165,114131,2018,8,1.601545927,10.13368616,10.53913803,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+166,114131,2018,12,1.517427129,9.509184912,9.914625297,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+167,114131,2018,10,1.482303807,9.772980154,10.17842627,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+168,114131,2018,9,1.048147074,8.128290172,8.533656917,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+169,114131,2018,11,1.048147074,7.772752716,8.178077464,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+170,114131,2018,2,0,0,0,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+171,114131,2018,3,0,0,0,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+172,114131,2018,4,0,0,0,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+173,114131,2018,7,0,0,0,0,0,2584,114131,Canada,British Columbia,Dawson Creek,U5I4F1,Male,Bachelor,80516,Married,Nova,5389.5,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+174,115505,2018,6,1.744855993,10.80610523,11.21156358,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+175,115505,2018,11,1.268636241,8.965079015,9.370501524,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+176,115505,2018,10,1.048147074,7.736743682,8.142063283,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+177,115505,2018,2,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+178,115505,2018,3,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+179,115505,2018,4,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+180,115505,2018,5,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+181,115505,2018,7,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+182,115505,2018,8,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+183,115505,2018,9,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+184,115505,2018,12,0,0,0,0,0,6561,115505,Canada,Newfoundland,St. John's,A1C6H9,Male,Bachelor,10605,Married,Nova,5860.17,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+185,116895,2018,8,1.744855993,10.113789,10.5192406,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+186,116895,2018,5,1.601545927,8.828933529,9.234349824,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+187,116895,2018,11,1.268636241,9.09346942,9.498897062,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+188,116895,2018,10,1.048147074,8.358666283,8.764053269,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+189,116895,2018,2,0,0,0,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+190,116895,2018,3,0,0,0,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+191,116895,2018,4,0,0,0,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+192,116895,2018,6,0,0,0,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+193,116895,2018,7,0,0,0,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+194,116895,2018,9,0,0,0,0,0,10314,116895,Canada,Ontario,Toronto,P1J8T7,Female,Doctor,299899,Married,Nova,19378.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+195,117482,2018,8,1.744855993,9.568084744,9.973526543,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+196,117482,2018,6,1.683215181,9.573941276,9.979383212,6.238324625,4.532599493,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+197,117482,2018,7,1.601545927,9.510519036,9.915959454,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+198,117482,2018,12,1.601545927,9.491677357,9.897117306,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+199,117482,2018,5,1.482303807,9.645299555,10.05074309,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+200,117482,2018,11,1.394958834,8.901775089,9.307194813,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+201,117482,2018,4,1.177410023,8.466531277,8.871926251,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+202,117482,2018,2,0.8325546112,7.229838778,7.635062311,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+203,117482,2018,3,0,0,0,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+204,117482,2018,9,0,0,0,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+205,117482,2018,10,0,0,0,0,0,5846,117482,Canada,New Brunswick,Fredericton,E3B2H2,Male,Bachelor,53563,Married,Nova,2869.74,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+206,117915,2018,8,1.794122578,10.81144365,11.21690203,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+207,117915,2018,7,1.683215181,10.5727774,10.97823397,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+208,117915,2018,5,1.601545927,8.854950317,9.260367866,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+209,117915,2018,6,1.601545927,10.08284639,10.48829757,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+210,117915,2018,10,1.482303807,9.025575834,9.431000843,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+211,117915,2018,4,1.177410023,8.188966864,8.594339401,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+212,117915,2018,11,1.048147074,8.137688185,8.543055851,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+213,117915,2018,2,0,0,0,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+214,117915,2018,3,0,0,0,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+215,117915,2018,9,0,0,0,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+216,117915,2018,12,0,0,0,0,0,3838,117915,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,75996,Married,Star,2605.57,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+217,118418,2018,7,1.794122578,10.64258754,11.04804469,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+218,118418,2018,6,1.744855993,10.03631245,10.44176296,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+219,118418,2018,12,1.665109222,9.345395603,9.750831588,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+220,118418,2018,8,1.601545927,9.74689222,10.15233784,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+221,118418,2018,9,1.268636241,8.161945799,8.567315801,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+222,118418,2018,4,1.177410023,8.665095821,9.070503427,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+223,118418,2018,2,0.8325546112,6.833031733,7.238137581,5.874930731,4.17438727,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+224,118418,2018,3,0,0,0,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+225,118418,2018,5,0,0,0,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+226,118418,2018,10,0,0,0,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+227,118418,2018,11,0,0,0,0,0,12846,118418,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,50847,Married,Aurora,5442.74,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+228,119198,2018,6,1.744855993,9.633055833,10.0384991,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+229,119198,2018,9,1.394958834,9.047468439,9.452894317,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+230,119198,2018,10,1.394958834,9.152605321,9.558035114,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+231,119198,2018,8,1.268636241,8.576405051,8.981807323,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+232,119198,2018,12,1.177410023,7.840706452,8.246040421,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+233,119198,2018,11,1.048147074,7.500529485,7.905810313,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+234,119198,2018,2,0,0,0,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+235,119198,2018,3,0,0,0,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+236,119198,2018,4,0,0,0,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+237,119198,2018,5,0,0,0,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+238,119198,2018,7,0,0,0,0,0,15229,119198,Canada,Quebec,Hull,J8Y3Z5,Male,College,0,Divorced,Star,2659.71,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+239,119634,2018,8,1.683215181,10.22850154,10.6339546,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+240,119634,2018,6,1.601545927,9.940253332,10.34570237,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+241,119634,2018,9,1.548513892,9.257319373,9.662752677,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+242,119634,2018,5,1.482303807,9.859378913,10.2648266,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+243,119634,2018,11,1.394958834,9.366916679,9.772353285,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+244,119634,2018,4,1.177410023,7.913521017,8.318864196,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+245,119634,2018,3,1.177410023,8.900139988,9.305559639,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+246,119634,2018,2,1.048147074,8.255048903,8.66042736,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+247,119634,2018,7,0,0,0,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+248,119634,2018,10,0,0,0,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+249,119634,2018,12,0,0,0,0,0,16487,119634,Canada,Saskatchewan,Regina,S1J3C5,Female,Master,114838,Divorced,Star,2300.69,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+250,119638,2018,8,1.744855993,9.57366317,9.979105099,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+251,119638,2018,6,1.683215181,9.833118735,10.23856596,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+252,119638,2018,7,1.683215181,10.39087053,10.7963254,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+253,119638,2018,3,0.8325546112,7.38832786,7.793586803,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+254,119638,2018,2,0,0,0,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+255,119638,2018,4,0,0,0,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+256,119638,2018,5,0,0,0,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+257,119638,2018,9,0,0,0,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+258,119638,2018,10,0,0,0,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+259,119638,2018,11,0,0,0,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+260,119638,2018,12,0,0,0,0,0,2799,119638,Canada,British Columbia,Vancouver,V5R1W3,Female,College,0,Single,Nova,6409.63,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+261,121351,2018,5,1.482303807,9.34145635,9.74689222,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+262,121351,2018,2,1.048147074,7.405495663,7.810758117,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+263,121351,2018,3,0.8325546112,7.395107547,7.800367884,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+264,121351,2018,4,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+265,121351,2018,6,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+266,121351,2018,7,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+267,121351,2018,8,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+268,121351,2018,9,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+269,121351,2018,10,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+270,121351,2018,11,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+271,121351,2018,12,0,0,0,0,0,8438,121351,Canada,Ontario,Toronto,P1L8X8,Female,Bachelor,63228,Divorced,Aurora,28421.57,2018 Promotion,2018,3,2018,5,0003-2018,"0 years, 2 months"
+272,122519,2018,8,1.683215181,10.58458746,10.99004413,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+273,122519,2018,5,1.601545927,10.13177784,10.53722968,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+274,122519,2018,10,1.482303807,9.730145559,10.13559085,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+275,122519,2018,3,1.048147074,8.362875831,8.768263145,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+276,122519,2018,9,1.048147074,8.323365694,8.728749873,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+277,122519,2018,4,0.8325546112,7.510430556,7.915713199,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+278,122519,2018,2,0,0,0,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+279,122519,2018,6,0,0,0,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+280,122519,2018,7,0,0,0,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+281,122519,2018,11,0,0,0,0,0,7194,122519,Canada,Nova Scotia,Halifax,B3J9S2,Male,Bachelor,49927,Married,Star,30081.37,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+282,122797,2018,8,1.744855993,9.646076003,10.05151955,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+283,122797,2018,5,1.601545927,10.17156623,10.57701859,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+284,122797,2018,6,1.601545927,10.0030161,10.40846612,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+285,122797,2018,9,1.394958834,9.170871628,9.57630206,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+286,122797,2018,7,1.268636241,9.121836973,9.527265663,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+287,122797,2018,11,1.268636241,9.159152335,9.564582359,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+288,122797,2018,2,0,0,0,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+289,122797,2018,3,0,0,0,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+290,122797,2018,4,0,0,0,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+291,122797,2018,10,0,0,0,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+292,122797,2018,12,0,0,0,0,0,7682,122797,Canada,Ontario,Toronto,M2M7K8,Male,Bachelor,59374,Divorced,Aurora,5946.67,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+293,124351,2018,2,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+294,124351,2018,3,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+295,124351,2018,4,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+296,124351,2018,5,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+297,124351,2018,6,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+298,124351,2018,7,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+299,124351,2018,8,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+300,124351,2018,9,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+301,124351,2018,10,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+302,124351,2018,11,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+303,124351,2018,12,0,0,0,0,0,15388,124351,Canada,Quebec,Hull,J8Y3Z5,Female,College,0,Single,Star,4774.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+304,125068,2018,6,1.744855993,9.936003144,10.34145212,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+305,125068,2018,7,1.683215181,9.999570161,10.40502013,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+306,125068,2018,12,1.665109222,9.963688555,10.36913797,6.073044534,4.369447852,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+307,125068,2018,11,1.482303807,9.877194911,10.28264291,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+308,125068,2018,9,1.394958834,8.848078421,9.253495642,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+309,125068,2018,10,1.048147074,8.305731145,8.711113884,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+310,125068,2018,2,0,0,0,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+311,125068,2018,3,0,0,0,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+312,125068,2018,4,0,0,0,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+313,125068,2018,5,0,0,0,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+314,125068,2018,8,0,0,0,0,0,4140,125068,Canada,British Columbia,Vancouver,V6E3D9,Female,Bachelor,19464,Married,Star,4064.18,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+315,129409,2018,5,1.744855993,10.71221535,11.11767303,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+316,129409,2018,7,1.744855993,10.1266711,10.53212288,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+317,129409,2018,12,1.517427129,9.01845321,9.423877933,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+318,129409,2018,3,1.177410023,8.384347278,8.789736245,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+319,129409,2018,4,0.8325546112,7.519149958,7.924434185,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+320,129409,2018,2,0,0,0,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+321,129409,2018,6,0,0,0,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+322,129409,2018,8,0,0,0,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+323,129409,2018,9,0,0,0,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+324,129409,2018,10,0,0,0,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+325,129409,2018,11,0,0,0,0,0,14707,129409,Canada,Quebec,Quebec City,G1B3L5,Male,Bachelor,64417,Single,Nova,12036.62,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+326,129533,2018,2,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+327,129533,2018,3,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+328,129533,2018,4,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+329,129533,2018,5,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+330,129533,2018,6,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+331,129533,2018,7,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+332,129533,2018,8,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+333,129533,2018,9,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+334,129533,2018,10,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+335,129533,2018,11,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+336,129533,2018,12,0,0,0,0,0,11019,129533,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,59926,Married,Star,2858.29,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+337,130032,2018,8,1.482303807,9.688374173,10.09381861,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+338,130032,2018,7,1.268636241,8.611229833,9.016634256,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+339,130032,2018,9,1.048147074,7.201170883,7.60638739,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+340,130032,2018,11,1.048147074,7.511524648,7.916807491,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+341,130032,2018,4,0.8325546112,7.549082711,7.954372273,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+342,130032,2018,2,0,0,0,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+343,130032,2018,3,0,0,0,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+344,130032,2018,5,0,0,0,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+345,130032,2018,6,0,0,0,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+346,130032,2018,10,0,0,0,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+347,130032,2018,12,0,0,0,0,0,6106,130032,Canada,New Brunswick,Fredericton,E3B2H2,Female,Doctor,330419,Married,Nova,25640.24,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+348,130446,2018,6,1.744855993,10.70146761,11.10692521,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+349,130446,2018,8,1.482303807,8.716863387,9.122273893,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+350,130446,2018,9,1.394958834,8.769196271,9.174609562,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+351,130446,2018,10,1.048147074,8.415160466,8.820551743,5.973809612,4.276666119,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+352,130446,2018,11,1.048147074,7.711996507,8.117312462,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+353,130446,2018,3,0,0,0,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+354,130446,2018,2,0,0,0,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+355,130446,2018,4,0,0,0,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+356,130446,2018,5,0,0,0,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+357,130446,2018,7,0,0,0,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+358,130446,2018,12,0,0,0,0,0,4437,130446,Canada,British Columbia,Victoria,V106T5,Female,College,0,Married,Star,5907.15,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+359,130497,2018,8,1.683215181,10.3435795,10.74903388,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+360,130497,2018,12,1.665109222,10.50083944,10.90629537,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+361,130497,2018,10,1.394958834,8.469052816,8.874447967,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+362,130497,2018,11,1.394958834,9.576718091,9.982160091,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+363,130497,2018,7,1.268636241,8.084870629,8.49023301,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+364,130497,2018,2,1.177410023,8.193123722,8.598496642,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+365,130497,2018,9,1.048147074,8.403576465,8.808966882,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+366,130497,2018,4,0.8325546112,7.601402335,8.006700845,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+367,130497,2018,3,0,0,0,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+368,130497,2018,5,0,0,0,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+369,130497,2018,6,0,0,0,0,0,9473,130497,Canada,Ontario,Toronto,M1R4K3,Female,Bachelor,61565,Married,Nova,5928.75,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+370,132563,2018,2,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+371,132563,2018,3,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+372,132563,2018,4,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+373,132563,2018,5,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+374,132563,2018,6,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+375,132563,2018,7,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+376,132563,2018,8,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+377,132563,2018,9,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+378,132563,2018,10,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+379,132563,2018,11,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+380,132563,2018,12,0,0,0,0,0,457,132563,Canada,Quebec,Tremblant,H5Y2S9,Male,College,0,Single,Nova,5955.54,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+381,133128,2018,7,1.683215181,9.642707033,10.04815051,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+382,133128,2018,6,1.482303807,9.784309795,10.18975613,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+383,133128,2018,8,1.482303807,9.750394646,10.15584033,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+384,133128,2018,9,1.394958834,9.231416698,9.636849167,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+385,133128,2018,11,1.394958834,9.506957408,9.912397739,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+386,133128,2018,12,1.394958834,8.340217321,8.745602852,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+387,133128,2018,3,1.177410023,8.652073674,9.057480525,5.92157842,4.219507705,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+388,133128,2018,2,0,0,0,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+389,133128,2018,4,0,0,0,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+390,133128,2018,5,0,0,0,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+391,133128,2018,10,0,0,0,0,0,3806,133128,Canada,British Columbia,Victoria,V106T5,Male,Bachelor,33784,Married,Star,2588.86,2018 Promotion,2018,2,0,0,0002-2018,Not Cancelled
+392,133324,2018,7,1.794122578,10.92437251,11.32983161,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+393,133324,2018,5,1.683215181,10.09646051,10.50191188,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+394,133324,2018,12,1.665109222,10.21192768,10.61738054,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+395,133324,2018,6,1.601545927,8.785845338,9.191259484,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+396,133324,2018,8,1.482303807,9.160414563,9.565844631,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+397,133324,2018,9,1.482303807,9.521421538,9.926862224,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+398,133324,2018,3,1.268636241,8.648396877,9.053803514,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+399,133324,2018,4,1.268636241,9.159573255,9.565003293,5.993961427,4.290459441,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+400,133324,2018,10,1.048147074,8.289288323,8.694669697,6.200509174,4.49980967,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+401,133324,2018,2,0,0,0,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+402,133324,2018,11,0,0,0,0,0,442,133324,Canada,Alberta,Edmonton,T9G1W3,Male,Bachelor,62527,Married,Nova,5759.91,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+403,133956,2018,5,1.683215181,9.662243674,10.06768757,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+404,133956,2018,7,1.683215181,9.708019964,10.11346481,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+405,133956,2018,6,1.601545927,9.598930563,10.00437307,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+406,133956,2018,12,1.517427129,9.874676471,10.28012442,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+407,133956,2018,10,1.482303807,9.746190261,10.15163586,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+408,133956,2018,3,1.177410023,8.707648248,9.113058249,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+409,133956,2018,2,1.048147074,8.220133957,8.625509335,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+410,133956,2018,4,0,0,0,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+411,133956,2018,8,0,0,0,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+412,133956,2018,9,0,0,0,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+413,133956,2018,11,0,0,0,0,0,5285,133956,Canada,Manitoba,Winnipeg,R2C0M5,Female,High School or Below,73861,Married,Nova,4882.29,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+414,134717,2018,8,1.482303807,9.696770839,10.10221545,6.559615237,4.852030264,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+415,134717,2018,11,1.394958834,9.073947747,9.47937465,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+416,134717,2018,5,1.268636241,8.639233817,9.044639916,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+417,134717,2018,7,1.268636241,8.29729437,8.702676412,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+418,134717,2018,4,0.8325546112,7.120444372,7.525639975,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+419,134717,2018,2,0,0,0,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+420,134717,2018,3,0,0,0,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+421,134717,2018,6,0,0,0,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+422,134717,2018,9,0,0,0,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+423,134717,2018,10,0,0,0,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+424,134717,2018,12,0,0,0,0,0,629,134717,Canada,Alberta,Edmonton,T9G1W3,Male,College,0,Single,Star,2379.74,2018 Promotion,2018,4,0,0,0004-2018,Not Cancelled
+425,135134,2018,7,1.744855993,9.325542302,9.730977703,6.758094504,5.049856007,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+426,135134,2018,9,1.548513892,8.696343057,9.101752432,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+427,135134,2018,8,1.482303807,9.55258165,9.958023085,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+428,135134,2018,4,1.268636241,8.492285556,8.897682313,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+429,135134,2018,5,1.268636241,8.087332926,8.49269556,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+430,135134,2018,6,1.268636241,7.901377354,8.306719043,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+431,135134,2018,11,1.268636241,9.016876975,9.422301634,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+432,135134,2018,3,1.048147074,7.567862605,7.973155433,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+433,135134,2018,2,0,0,0,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+434,135134,2018,10,0,0,0,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+435,135134,2018,12,0,0,0,0,0,2017,135134,Canada,British Columbia,Vancouver,V1E4R6,Female,Bachelor,74726,Married,Aurora,15806.53,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+436,135257,2018,12,1.517427129,9.652587324,10.05803101,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+437,135257,2018,5,1.482303807,9.853088595,10.25853617,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+438,135257,2018,4,1.268636241,9.19715381,9.602585142,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+439,135257,2018,6,1.268636241,7.763446389,8.168769824,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+440,135257,2018,8,1.268636241,8.839421608,9.244838412,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+441,135257,2018,11,1.268636241,8.63212773,9.037533408,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+442,135257,2018,2,0,0,0,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+443,135257,2018,3,0,0,0,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+444,135257,2018,7,0,0,0,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+445,135257,2018,9,0,0,0,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+446,135257,2018,10,0,0,0,0,0,9383,135257,Canada,Ontario,Toronto,P2T6G3,Female,Bachelor,51362,Single,Nova,5577.94,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+447,136473,2018,7,1.683215181,10.52752578,10.93298196,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+448,136473,2018,8,1.683215181,9.376617232,9.782054112,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+449,136473,2018,9,1.394958834,9.474318718,9.879758226,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+450,136473,2018,11,1.394958834,8.618485443,9.023890305,6.32256524,4.615120517,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+451,136473,2018,2,1.177410023,7.765993079,8.171316875,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+452,136473,2018,3,0.8325546112,6.317164687,6.722027929,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+453,136473,2018,4,0,0,0,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+454,136473,2018,5,0,0,0,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+455,136473,2018,6,0,0,0,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+456,136473,2018,10,0,0,0,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+457,136473,2018,12,0,0,0,0,0,1404,136473,Canada,British Columbia,Vancouver,V5R1W3,Male,Bachelor,29528,Married,Aurora,6188.38,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+458,137161,2018,7,1.794122578,10.36800742,10.77346206,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+459,137161,2018,6,1.482303807,9.656627475,10.06207125,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+460,137161,2018,9,1.482303807,9.810549557,10.21599637,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+461,137161,2018,11,1.394958834,8.548885638,8.954286157,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+462,137161,2018,12,1.394958834,9.271717652,9.67715141,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+463,137161,2018,10,1.268636241,8.019941688,8.425297177,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+464,137161,2018,2,1.048147074,7.301822342,7.707062655,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+465,137161,2018,3,0,0,0,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+466,137161,2018,4,0,0,0,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+467,137161,2018,5,0,0,0,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+468,137161,2018,8,0,0,0,0,0,12096,137161,Canada,Ontario,Trenton,K8V4B2,Male,Bachelor,64526,Single,Star,10145.44,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+469,137852,2018,5,1.601545927,8.90666441,9.312084356,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+470,137852,2018,6,1.601545927,9.650464523,10.05590817,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+471,137852,2018,8,1.601545927,9.839322295,10.24476963,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+472,137852,2018,7,1.268636241,8.216358332,8.621733371,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+473,137852,2018,10,1.268636241,7.989221409,8.394573478,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+474,137852,2018,4,1.177410023,7.880048201,8.28538723,6.186208624,4.477336814,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+475,137852,2018,12,1.177410023,8.784009071,9.189423124,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+476,137852,2018,11,1.048147074,7.63385356,8.03915739,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+477,137852,2018,2,0,0,0,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+478,137852,2018,3,0,0,0,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+479,137852,2018,9,0,0,0,0,0,7052,137852,Canada,Nova Scotia,Halifax,B3J9S2,Female,Bachelor,21249,Married,Star,2693.66,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+480,139023,2018,8,1.683215181,9.492884267,9.898324246,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+481,139023,2018,5,1.601545927,8.972717499,9.378140332,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+482,139023,2018,10,1.482303807,9.830540445,10.23598762,6.040254711,4.33073334,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+483,139023,2018,9,1.482303807,9.699717615,10.10516229,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+484,139023,2018,6,1.268636241,8.356319966,8.761706768,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+485,139023,2018,11,1.268636241,8.727292029,9.132703102,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+486,139023,2018,4,1.048147074,8.317521996,8.722905701,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+487,139023,2018,2,0,0,0,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+488,139023,2018,3,0,0,0,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+489,139023,2018,7,0,0,0,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+490,139023,2018,12,0,0,0,0,0,16396,139023,Canada,Saskatchewan,Regina,S6J3G0,Male,Bachelor,55271,Married,Nova,9788.71,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+491,140077,2018,6,1.794122578,10.92911688,11.33457601,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+492,140077,2018,7,1.601545927,10.07630576,10.48175685,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+493,140077,2018,8,1.601545927,9.008591318,9.41401564,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+494,140077,2018,11,1.394958834,8.134174272,8.539541595,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+495,140077,2018,12,1.394958834,8.738895705,9.144307401,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+496,140077,2018,5,1.268636241,8.455530531,8.86092473,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+497,140077,2018,4,0.8325546112,7.34536484,7.750614733,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+498,140077,2018,2,0,0,0,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+499,140077,2018,3,0,0,0,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
+500,140077,2018,9,0,0,0,0,0,7170,140077,Canada,Nova Scotia,Halifax,B3J9S2,Male,High School or Below,27588,Single,Star,4770.55,2018 Promotion,2018,3,0,0,0003-2018,Not Cancelled
