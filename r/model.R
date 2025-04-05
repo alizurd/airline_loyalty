@@ -19,7 +19,7 @@ library(party)
 
 
 
-setwd("/Users/alyssabueno/Desktop/airline_loyalty")
+setwd("/Users/alyssabueno/Desktop/airline_loyalty/data/raw_data")
 history <- read.csv("loyalty_history.csv", stringsAsFactors = FALSE)
 flights <- read.csv("flight_activity.csv", stringsAsFactors = FALSE)
 
@@ -168,7 +168,7 @@ ggplot(joined, aes(y=points_accumulated_t)) +
   geom_boxplot()
 
 
-
+write.csv(joined, "cleaned_model_data.csv", row.names = FALSE)
 
 
 # Model
@@ -225,4 +225,8 @@ table(Predicted = joined$predicted_class, Actual = joined$churned) # confusion m
 
 mean(joined$predicted_class == joined$churned) # precision
 
+# next steps:
+#   continue to refine the model
+#   figure out ways we can cut less data during the cleaning process
+#   data viz + storytelling!
 
