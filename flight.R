@@ -4,7 +4,7 @@ library(dplyr)
 library(moments)
 
 setwd("/Users/alyssabueno/Desktop/airline_loyalty")
-flights <- read.csv("customer_flight_activity.csv", stringsAsFactors = FALSE)
+flights <- read.csv("flight_activity.csv", stringsAsFactors = FALSE)
 View(flights)
 
 # changing column names
