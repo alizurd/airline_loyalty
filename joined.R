@@ -17,6 +17,9 @@ setwd("/Users/alyssabueno/Desktop/airline_loyalty")
 history <- read.csv("loyalty_history.csv", stringsAsFactors = FALSE)
 flights <- read.csv("flight_activity.csv", stringsAsFactors = FALSE)
 
+
+# Cleaning and joining datasets
+
 # change column names to lowercase and snakecase
 history <- clean_names(history) 
 flights <- clean_names(flights)
@@ -36,7 +39,7 @@ history <- history %>% filter(!is.na(loyalty_number))
 any(duplicated(flights$loyalty_number))
 any(duplicated(history$loyalty_number))
 
-# there are duplicates, so im dropping the month column and summing up the rest of the columns by loyalty_number
+# there are duplicates in flights data, so im dropping the month + year and summing up the rest of the columns by loyalty_number
 flights <- flights %>%
   select(-month, -year) %>%                             # Drop the 'month' column
   group_by(loyalty_number) %>%                   # Group by unique ID
@@ -57,12 +60,22 @@ history <- history %>% filter(!is.na(loyalty_number))
 # now join
 joined <- inner_join(flights, history, by = "loyalty_number")
 
+View(joined)
 
 
 # apply more transformations
 joined[is.na(joined)] <- 0 # change NA to 0 or NULL
 
+# drop rows with salary == 0 
+joined <- joined %>% 
+  filter (salary != 0) %>%
+  drop_na()
+
 joined$postal_code <- gsub(" ", "", history$postal_code) # remove spaces from the postal codes
+
+
+
+# Transformation
 
 joined <- joined %>%
   mutate(country = as.factor(country),
@@ -82,13 +95,13 @@ joined$salary <- as.numeric(joined$salary)
 joined$clv <- as.numeric(joined$clv)
 joined$enrollment_year <- as.numeric(joined$enrollment_year)
 joined$enrollment_month <- as.numeric(joined$enrollment_month)
-joined$loyalty_number <- as.numeric(joined$loyalty_number)
 joined$total_flights <- as.numeric(joined$total_flights)
 joined$distance <- as.numeric(joined$distance)
 joined$points_accumulated <- as.numeric(joined$points_accumulated)
 joined$points_redeemed <- as.numeric(joined$points_redeemed)
 joined$dollar_cost_points_redeemed <- as.numeric(joined$dollar_cost_points_redeemed)
-joined$year <- as.numeric(joined$year)
+joined$cancellation_month <- as.numeric(joined$cancellation_month)
+joined$cancellation_year <- as.numeric(joined$cancellation_year)
 
 joined$salary <- abs(joined$salary) # changing the negative salary values positive
 
@@ -109,7 +122,8 @@ skew_points_redeemed <- skewness(joined$points_redeemed)
 skew_dollar_cost_points_redeemed <- skewness(joined$dollar_cost_points_redeemed)
 skew_distance <- skewness(joined$distance)
 skew_total_flights <- skewness(joined$skew_total_flights)
-skew_
+# skew_salary <- skewness(joined$skew_salary) # returning errors - might need to investigate
+# skew_clv <- skewness(joined$skew_clv)
 
 # data is right skewed if > 0 
 
@@ -117,83 +131,57 @@ skew_
 # points_accumulated, points_redeemed, dollar_cost_points_redeemed, distance
 
 # let's see what that looks like
-joined$points_accumulated <- log1p(joined$points_accumulated)
-joined$points_redeemed <- log1p(joined$points_redeemed)
-joined$dollar_cost_points_redeemed <- log1p(joined$dollar_cost_points_redeemed)
-joined$distance <- log1p(joined$distance)
+joined$log_dollar_cost_points_redeemed <- log1p(joined$dollar_cost_points_redeemed)
+joined$log_points_accumulated <- log1p(joined$points_accumulated)
+joined$log_points_redeemed <- log1p(joined$points_redeemed)
+joined$log_dollar_cost_points_redeemed <- log1p(joined$dollar_cost_points_redeemed)
+joined$log_distance <- log1p(joined$distance)
+joined$log_salary <- log1p(joined$salary)
+joined$log_clv <- log1p(joined$clv)
 
 # square root transformation on total_flights column
-joined$total_flights <- sqrt(log1p(joined$total_flights))
+joined$sqrt_total_flights <- sqrt(log1p(joined$total_flights))
 
 View(joined)
 
-# boxplots still look funky but it's okay, that's normal
-ggplot(joined, aes(y=points_accumulated)) +
+# check visually - boxplots still look funky but it's okay, that's normal
+ggplot(joined, aes(y=points_accumulated_t)) +
   geom_boxplot()
-    
-# Transformation
 
-# visual inspection
 
-# history %>% gather(clv, salary) %>%
-#   ggplot(aes(x = value)) +
-#   geom_histogram(fill = "steelblue", alpha = 0.7) +
-#   theme_minimal() + 
-#   facet_wrap(~key, scales = "free")
 
-plot(plot)
 
-# check for skew
-check_skewness <- function(history) {
-  sapply(history, function(col) if (is.numeric(col)) skewness(col, na.rm = TRUE) else NA)
-}
-skew_values <- check_skewness(history)
-print(skew_values)
 
-# clv is positively skewed >3
-# salary is positively skewed = 1.2
-history$clv <- log1p(history$clv)
-history$salary <- sqrt(log1p(history$salary))
+# Model
 
-zero_rows <- sum(history$salary == 0, na.rm = TRUE)
-print(zero_rows)
+# linear model with log data
+log_model <- lm(
+  clv ~ gender + education + marital_status + loyalty_card + enrollment_type + 
+    total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
+    + salary,
+  data = joined
+)
 
-history <- history %>% 
-  filter(salary != 0) # filtering out rows where salary = 0
-         
-View(history)
-
-# training data 70% train, 30% test
-set.seed(123)
-train_index <- createDataPartition(history$clv, p = 0.7, list = FALSE)
-train_data <- history[train_index, ]
-test_data <- history[-train_index]
-
-# train logistic regression model
-log_model <- glm(history$clv ~ history$gender + history$education + history$salary + history$marital_status + history$loyalty_card + history$salary)
-
-# model summary
 summary(log_model)
 
-# model evaluation
-test_data$pred_prob <- predict(log_model, newdata = history, type = "response")
+# lm with untransformed data
+model <- lm(
+  clv ~ gender + education + province + marital_status + salary+ loyalty_card + enrollment_type + 
+    total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
+    + cancellation_month + cancellation_year,
+  data = joined
+)
 
-# # Convert to class labels (threshold = 0.5)
-# test_data$pred_class <- ifelse(test_data$pred_prob > 0.5, 1, 0)
-# 
-# # Confusion Matrix
-# conf_matrix <- confusionMatrix(as.factor(test_data$pred_class), test_data$purchased)
-# print(conf_matrix)
-# 
-# # AUC-ROC Curve
-# roc_obj <- roc(test_data$purchased, test_data$pred_prob)
-# auc_val <- auc(roc_obj)
-# plot(roc_obj, col = "blue", main = paste("ROC Curve (AUC =", round(auc_val, 3), ")"))
+# model summary
+summary(model)
 
-# checks
+# curious to see the relationship between salary and other variables
 
-head(history)
-colSums(is.na(history))
-str(history)
+salary_model <- lm(salary ~ loyalty_card + marital_status + enrollment_month
+                   + total_flights + )
 
+
+# next steps: continue refining, it's possible i cut too much of the data
+# priority though is to move onto the ML part
+# question of the hour: how can we predict customer enrollment in the loyalty program?
 
