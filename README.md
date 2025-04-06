@@ -2,7 +2,7 @@
 
 The primary purpose of this project is to determine what causes customers to churn out of a *fictionary* airlines loyalty program. secondary analyses include uncovering predictors of clv and relationships between variables in the data.
 
-flights file
+## flights file
 | Column        | Description   |
 | ------------- | ------------- |
 | loyalty_number  |  Customer's unique loyalty number |
@@ -14,7 +14,7 @@ flights file
 | points_redeemed  | Loyalty points redeemed in the period |
 | dollar_cost_points_redeemed  | Dollar equivalent for points redeemed in the period in CDN |
 
-history file
+## history file
 | Column        | Description   |
 | ------------- | ------------- |
 | loyalty_number  | Customer's unique loyalty number |
