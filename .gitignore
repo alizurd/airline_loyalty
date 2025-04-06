@@ -33,3 +33,4 @@ figures/
 *.log
 *.tmp
 *.bak
+.Rapp.history
