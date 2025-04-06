@@ -1,6 +1,8 @@
-# airline loyalty program 
+# airline loyalty churn project
 
-The primary purpose of this project is to determine what causes customers to churn out of a *fictional* airlines loyalty program. secondary analyses include uncovering predictors of clv and relationships between variables in the data.
+The primary purpose of this project is to determine what causes customers to churn out of a *fictional* airlines loyalty program. secondary analyses include uncovering predictors of clv (customer lifetime value) and relationships between variables in the data.
+
+Status: we've created a base model and are continuing to refine it, as well as EDA to derive interesting insights! more updates to come~~
 
 ## flights file
 | Column        | Description   |
@@ -24,7 +26,7 @@ The primary purpose of this project is to determine what causes customers to chu
 | `postal_code`  | Postal code of residence  |
 | `gender`  | Gender  |
 | `education`  | Highest education level (High school or lower > College > Bachelor > Master > Doctor) |
-| `salary`  | CAnnual income  |
+| `salary`  | Annual income  |
 | `marital_status`  | Marital status (Single, Married, Divorced) |
 | `loyalty_card`  | Loyalty card status (Star > Nova > Aurora)  |
 | `clv`  | Customer lifetime value - total invoice value for all flights ever booked by member |
