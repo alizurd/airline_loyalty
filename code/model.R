@@ -214,14 +214,18 @@ summary(churn_model)
 
 # this is the glm model with transformed data
 
-churn_model_stan <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
+set.seed(42)
+train_index <- sample(1:nrow(joined), 0.8 * nrow(joined)) # samples 80% of the data to train the model
+train_data <- data [train_index, ] # subsets the original data indicated in train_index
+test_data <- data[-train_index, ] # uses the remaining 30% to use to test the model
+
+churn_model_tran <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
                    + enrollment_year + sqrt_total_flights + log_distance + log_points_accumulated + log_points_redeemed
                    + log_dollar_cost_points_redeemed, data = joined,
-                   family = binomial
-                   
-)
+                   family = binomial               
+                        )
 
-summary(churn_model_stan)
+summary(churn_model_tran)
 
 # evaluate
 
@@ -235,7 +239,7 @@ table(Predicted = joined$predicted_class, Actual = joined$churned) # confusion m
 mean(joined$predicted_class == joined$churned) # precision
 
 # next steps:
-#   continue to refine the model
+# continue to refine the model
   # clean the data better
   # different ways to validate model accuracy
   # set.seed = allows you to train a small portion of the data to the model = ML 
