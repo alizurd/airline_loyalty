@@ -221,7 +221,7 @@ test_data <- data[-train_index, ] # uses the remaining 30% to use to test the mo
 
 churn_model_tran <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
                    + enrollment_year + sqrt_total_flights + log_distance + log_points_accumulated + log_points_redeemed
-                   + log_dollar_cost_points_redeemed, data = joined,
+                   + log_dollar_cost_points_redeemed, data = train_index,
                    family = binomial               
                         )
 
