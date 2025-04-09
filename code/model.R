@@ -18,11 +18,9 @@ library(pROC)
 library(party)
 
 
-
 setwd("/Users/alyssabueno/Desktop/airline_loyalty/data/raw_data")
 history <- read.csv("loyalty_history.csv", stringsAsFactors = FALSE)
 flights <- read.csv("flight_activity.csv", stringsAsFactors = FALSE)
-
 
 # Cleaning and joining datasets
 
@@ -110,7 +108,7 @@ joined <- joined %>%
   mutate(loyalty_number = as.numeric(loyalty_number),
          salary = as.numeric(salary),
          clv = as.numeric(clv),
-         enrollment_year = as.numeric(enrollment_year),
+         enrollment_year = as.factor(enrollment_year),
          enrollment_month = as.numeric(enrollment_month),
          total_flights = as.numeric(total_flights),
          distance = as.numeric(distance),
@@ -214,6 +212,17 @@ churn_model <- glm(churned ~ gender + education + salary + marital_status + loya
 
 summary(churn_model)
 
+# this is the glm model with transformed data
+
+churn_model_stan <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
+                   + enrollment_year + sqrt_total_flights + log_distance + log_points_accumulated + log_points_redeemed
+                   + log_dollar_cost_points_redeemed, data = joined,
+                   family = binomial
+                   
+)
+
+summary(churn_model_stan)
+
 # evaluate
 
 joined$predicted_prob <- predict(churn_model, type = "response") # creating prediction
@@ -227,6 +236,9 @@ mean(joined$predicted_class == joined$churned) # precision
 
 # next steps:
 #   continue to refine the model
+  # clean the data better
+  # different ways to validate model accuracy
+  # set.seed = allows you to train a small portion of the data to the model = ML 
 #   figure out ways we can cut less data during the cleaning process
 #   data viz + storytelling!
 
