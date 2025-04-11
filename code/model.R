@@ -216,8 +216,8 @@ summary(churn_model)
 
 set.seed(42)
 train_index <- sample(1:nrow(joined), 0.8 * nrow(joined)) # samples 80% of the data to train the model
-train_data <- data [train_index, ] # subsets the original data indicated in train_index
-test_data <- data[-train_index, ] # uses the remaining 30% to use to test the model
+train_data <- joined [train_index, ] # subsets the original data indicated in train_index
+test_data <- joined[-train_index, ] # uses the remaining 30% to use to test the model
 
 churn_model_tran <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
                    + enrollment_year + sqrt_total_flights + log_distance + log_points_accumulated + log_points_redeemed
@@ -229,14 +229,22 @@ summary(churn_model_tran)
 
 # evaluate
 
-joined$predicted_prob <- predict(churn_model, type = "response") # creating prediction
-joined$predicted_class <- ifelse(joined$predicted_prob > 0.5, 1, 0) # prediction column
+# 1. Predict on test_data
+test_data$predicted_prob <- predict(churn_model_tran, newdata = test_data, type = "response")
 
+# 2. Classify based on threshold
+test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.5, 1, 0)
 
-# Accuracy
-table(Predicted = joined$predicted_class, Actual = joined$churned) # confusion matrix
+# 3. ROC Curve (make sure to use the correct column name)
+roc_obj <- roc(test_data$purchased, test_data$predicted_prob)
+auc_val <- auc(roc_obj)
+plot(roc_obj, col = "blue", main = paste("ROC Curve (AUC =", round(auc_val, 3), ")"))
 
-mean(joined$predicted_class == joined$churned) # precision
+# 4. Confusion Matrix (on test set, not joined)
+table(Predicted = test_data$predicted_class, Actual = test_data$purchased)
+
+# 5. Accuracy (this measures proportion correctly predicted)
+mean(test_data$predicted_class == test_data$purchased)
 
 # next steps:
 # continue to refine the model
