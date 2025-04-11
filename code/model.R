@@ -166,7 +166,7 @@ ggplot(joined, aes(y=points_accumulated_t)) +
   geom_boxplot()
 
 
-write.csv(joined, "cleaned_model_data.csv", row.names = FALSE)
+write.csv(joined, "clean_data.csv", row.names = FALSE)
 
 
 # Model
