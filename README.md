@@ -2,8 +2,6 @@
 
 The primary purpose of this project is to determine what causes customers to churn out of a *fictional* airlines loyalty program. secondary analyses include uncovering predictors of clv (customer lifetime value) and relationships between variables in the data.
 
-Status: we've created a base model and are continuing to refine it, as well as EDA to derive interesting insights! more updates to come~~
-
 ## flights file
 | Column        | Description   |
 | ------------- | ------------- |
@@ -35,3 +33,7 @@ Status: we've created a base model and are continuing to refine it, as well as E
 | `enrollment_month`  | Month Member enrolled in membership program  |
 | `cancellation_year`  | Year Member cancelled their membership  |
 | `cancellation_month`  | Month Member cancelled their membership |
+
+## TODO
+
+Status: we've created a base model and are continuing to refine it, as well as EDA to derive interesting insights! more updates to come~~
