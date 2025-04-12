@@ -5,7 +5,7 @@
 
 install.packages("janitor")
 install.packages("lattice")
-install.packages("pROC")
+install.packages("PRROC")
 install.packages("party")
 install.packages("DT")
 
@@ -44,6 +44,7 @@ history_df <- history_df %>% filter(!is.na(loyalty_number))
 # any(duplicated(flights$loyalty_number))
 # any(duplicated(history_df$loyalty_number))
 
+
 history_df <- history_df %>%
 mutate(
   salary = ifelse(education == "College" & salary == 0, NA, salary)
@@ -57,8 +58,6 @@ mutate(
   salary)
 ) %>%
 ungroup()
-
-datatable(history_df)
 
 
 # there are multiple rows of customer data so i am counting unique month/ year combos, and years, and aggregating all other numeric cols
@@ -74,8 +73,8 @@ flights <- flights %>%
 # View(flights)
 
 # Make sure it's the same type in both dataframes
-flights$loyalty_number <- as.numeric(flights$loyalty_number)
-history_df$loyalty_number <- as.numeric(history_df$loyalty_number)
+# flights$loyalty_number <- as.numeric(flights$loyalty_number)
+# history_df$loyalty_number <- as.numeric(history_df$loyalty_number)
 
 # Remove whitespace, leading zeros, etc.
 flights$loyalty_number <- trimws(flights$loyalty_number)
@@ -88,16 +87,18 @@ history_df <- history_df %>% filter(!is.na(loyalty_number))
 # now join
 joined <- inner_join(flights, history_df, by = "loyalty_number")
 
-head(joined, 150)
+# glimpse(joined)
 
 
 # apply more transformations
 joined[is.na(joined)] <- 0 # change NA to 0 or NULL
 
 # drop rows with salary == 0 
-joined <- joined %>% 
-  filter (salary != 0) %>%
-  drop_na()
+# joined <- joined %>% 
+#   filter (salary != 0) %>%
+#   drop_na()
+
+# summary(joined)
 
 joined$postal_code <- gsub(" ", "", joined$postal_code) # remove spaces from the postal codes
 
@@ -120,7 +121,7 @@ joined <- joined %>%
          enrollment_type = as.factor(enrollment_type))
 
 # making columns numeric
-str(joined)
+# str(joined)
 
 joined <- joined %>%
   mutate(loyalty_number = as.numeric(loyalty_number),
@@ -144,19 +145,19 @@ joined <- joined %>%
   filter(points_redeemed <= points_accumulated) # filter out rows where points_redeemed > points_accumulated
 
 # [optional] check for outliers
-ggplot(joined, aes(y=points_accumulated)) +
-  geom_boxplot()
-ggplot(joined, aes(y=points_redeemed)) +
-  geom_boxplot()
-ggplot(joined, aes(y=dollar_cost_points_redeemed)) +
-  geom_boxplot()
+# ggplot(joined, aes(y=points_accumulated)) +
+#   geom_boxplot()
+# ggplot(joined, aes(y=points_redeemed)) +
+#   geom_boxplot()
+# ggplot(joined, aes(y=dollar_cost_points_redeemed)) +
+#   geom_boxplot()
 
 # checking for skew
-skew_points_accumulated <- skewness(joined$points_accumulated)
-skew_points_redeemed <- skewness(joined$points_redeemed)
-skew_dollar_cost_points_redeemed <- skewness(joined$dollar_cost_points_redeemed)
-skew_distance <- skewness(joined$distance)
-skew_total_flights <- skewness(joined$skew_total_flights)
+# skew_points_accumulated <- skewness(joined$points_accumulated)
+# skew_points_redeemed <- skewness(joined$points_redeemed)
+# skew_dollar_cost_points_redeemed <- skewness(joined$dollar_cost_points_redeemed)
+# skew_distance <- skewness(joined$distance)
+# skew_total_flights <- skewness(joined$skew_total_flights)
 # skew_salary <- skewness(joined$skew_salary) # returning errors - might need to investigate
 # skew_clv <- skewness(joined$skew_clv)
 
@@ -177,58 +178,58 @@ joined$log_clv <- log1p(joined$clv)
 # square root transformation on total_flights column
 joined$sqrt_total_flights <- sqrt(log1p(joined$total_flights))
 
-View(joined)
+# View(joined)
 
 # check visually - boxplots still look funky but it's okay, that's normal
-ggplot(joined, aes(y=points_accumulated_t)) +
-  geom_boxplot()
+# ggplot(joined, aes(y=points_accumulated_t)) +
+#   geom_boxplot()
 
 
-write.csv(joined, "clean_data.csv", row.names = FALSE)
+# write.csv(joined, "clean_data.csv", row.names = FALSE)
 
 
 # Model
 
 # linear model with log data
-log_model <- lm(
-  clv ~ gender + education + marital_status + loyalty_card + enrollment_type + 
-    total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
-    + salary,
-  data = joined
-)
+# log_model <- lm(
+#   clv ~ gender + education + marital_status + loyalty_card + enrollment_type + 
+#     total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
+#     + salary,
+#   data = joined
+# )
 
-summary(log_model)
+# summary(log_model)
 
-# lm with untransformed data
-model <- lm(
-  clv ~ gender + education + province + marital_status + salary+ loyalty_card + enrollment_type + 
-    total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
-    + cancellation_month + cancellation_year,
-  data = joined
-)
+# # lm with untransformed data
+# model <- lm(
+#   clv ~ gender + education + province + marital_status + salary+ loyalty_card + enrollment_type + 
+#     total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
+#     + cancellation_month + cancellation_year,
+#   data = joined
+# )
 
-# model summary
-summary(model)
+# # model summary
+# summary(model)
 
 # as a followup, would be interesting to see the relationship between salary and other variables..
 
-salary_model <- lm(salary ~ loyalty_card + marital_status + enrollment_month
-                   + total_flights, data = joined
-                   )
+# salary_model <- lm(salary ~ loyalty_card + marital_status + enrollment_month
+#                    + total_flights, data = joined
+#                    )
 
 # next steps: continue refining, it's possible i cut too much of the data
 # priority though is to move onto the ML part
 # question of the hour: how can we predict customer churn in the loyalty program?
 
 
-churn_model <- glm(churned ~ gender + education + salary + marital_status + loyalty_card + clv 
-                   + enrollment_year + total_flights + distance + points_accumulated + points_redeemed
-                   + dollar_cost_points_redeemed, data = joined,
-                   family = binomial
+# churn_model <- glm(churned ~ gender + education + salary + marital_status + loyalty_card + clv 
+#                    + enrollment_year + total_flights + distance + points_accumulated + points_redeemed
+#                    + dollar_cost_points_redeemed, data = joined,
+#                    family = binomial
   
-)
+# )
 
-summary(churn_model)
+# summary(churn_model)
 
 # this is the glm model with transformed data
 
@@ -237,11 +238,17 @@ train_index <- sample(1:nrow(joined), 0.8 * nrow(joined)) # samples 80% of the d
 train_data <- joined [train_index, ] # subsets the original data indicated in train_index
 test_data <- joined[-train_index, ] # uses the remaining 30% to use to test the model
 
-churn_model_tran <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
-                   + enrollment_year + sqrt_total_flights + log_distance + log_points_accumulated + log_points_redeemed
-                   + log_dollar_cost_points_redeemed, data = train_index,
-                   family = binomial               
-                        )
+# churn_model_tran <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
+#                    + enrollment_year + sqrt_total_flights + log_distance + log_points_accumulated 
+#                    + log_points_redeemed + log_dollar_cost_points_redeemed,
+#                    data = train_data,
+#                    family = binomial)
+
+churn_model_tran <- glm(churned ~ loyalty_card
+                   + sqrt_total_flights + log_distance + log_points_accumulated 
+                   + log_points_redeemed + log_dollar_cost_points_redeemed,
+                   data = train_data,
+                   family = binomial)
 
 summary(churn_model_tran)
 
@@ -251,18 +258,25 @@ summary(churn_model_tran)
 test_data$predicted_prob <- predict(churn_model_tran, newdata = test_data, type = "response")
 
 # 2. Classify based on threshold
-test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.5, 1, 0)
+test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.2, 1, 0)
 
 # 3. ROC Curve (make sure to use the correct column name)
-roc_obj <- roc(test_data$purchased, test_data$predicted_prob)
+roc_obj <- roc(test_data$churned, test_data$predicted_prob)
 auc_val <- auc(roc_obj)
 plot(roc_obj, col = "blue", main = paste("ROC Curve (AUC =", round(auc_val, 3), ")"))
 
 # 4. Confusion Matrix (on test set, not joined)
-table(Predicted = test_data$predicted_class, Actual = test_data$purchased)
+table(Predicted = test_data$predicted_class, Actual = test_data$churned)
 
 # 5. Accuracy (this measures proportion correctly predicted)
-mean(test_data$predicted_class == test_data$purchased)
+mean(test_data$predicted_class == test_data$churned)
+
+library(PRROC)
+pr <- pr.curve(scores.class0 = test_data$predicted_prob[test_data$churned == 1],
+               scores.class1 = test_data$predicted_prob[test_data$churned == 0],
+               curve = TRUE)
+plot(pr)
+
 
 # next steps:
 # continue to refine the model
@@ -271,4 +285,5 @@ mean(test_data$predicted_class == test_data$purchased)
   # set.seed = allows you to train a small portion of the data to the model = ML 
 #   figure out ways we can cut less data during the cleaning process
 #   data viz + storytelling!
+
 
