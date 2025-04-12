@@ -7,6 +7,7 @@ install.packages("janitor")
 install.packages("lattice")
 install.packages("pROC")
 install.packages("party")
+install.packages("DT")
 
 library(janitor)
 library(moments)
@@ -16,32 +17,49 @@ library(ggplot2)
 library(caret)
 library(pROC)
 library(party)
-
+library(DT)
 
 setwd("/Users/alyssabueno/Desktop/airline_loyalty/data/raw_data")
-history <- read.csv("loyalty_history.csv", stringsAsFactors = FALSE)
+history_df <- read.csv("loyalty_history.csv", stringsAsFactors = FALSE)
 flights <- read.csv("flight_activity.csv", stringsAsFactors = FALSE)
 
 # Cleaning and joining datasets
 
 # change column names to lowercase and snakecase
-history <- clean_names(history) 
+history_df <- clean_names(history_df) 
 flights <- clean_names(flights)
 
 # check to see if there are any unmatching rows before join
-flights_unmatched <- flights %>% filter(!loyalty_number %in% history$loyalty_number)
-history_unmatched <- history %>% filter(!loyalty_number %in% flights$loyalty_number)
+# flights_unmatched <- flights %>% filter(!loyalty_number %in% history_df$loyalty_number)
+# history_df_unmatched <- history_df %>% filter(!loyalty_number %in% flights$loyalty_number)
 
-nrow(flights_unmatched)
-nrow(history_unmatched)
+# nrow(flights_unmatched)
+# nrow(history_df_unmatched)
 
 # remove rows with missing join keys
 flights <- flights %>% filter(!is.na(loyalty_number))
-history <- history %>% filter(!is.na(loyalty_number))
+history_df <- history_df %>% filter(!is.na(loyalty_number))
 
 # check for duplicates in primary key
-any(duplicated(flights$loyalty_number))
-any(duplicated(history$loyalty_number))
+# any(duplicated(flights$loyalty_number))
+# any(duplicated(history_df$loyalty_number))
+
+history_df <- history_df %>%
+mutate(
+  salary = ifelse(education == "College" & salary == 0, NA, salary)
+)
+
+history_df <- history_df %>%
+group_by(city) %>% 
+mutate(
+  salary = ifelse(is.na(salary),
+  median(salary, na.rm = TRUE),
+  salary)
+) %>%
+ungroup()
+
+datatable(history_df)
+
 
 # there are multiple rows of customer data so i am counting unique month/ year combos, and years, and aggregating all other numeric cols
 flights <- flights %>%
@@ -53,24 +71,24 @@ flights <- flights %>%
             .groups = "drop" # drop grouping
     )  
 
-View(flights)
+# View(flights)
 
 # Make sure it's the same type in both dataframes
 flights$loyalty_number <- as.numeric(flights$loyalty_number)
-history$loyalty_number <- as.numeric(history$loyalty_number)
+history_df$loyalty_number <- as.numeric(history_df$loyalty_number)
 
 # Remove whitespace, leading zeros, etc.
 flights$loyalty_number <- trimws(flights$loyalty_number)
-history$loyalty_number <- trimws(history$loyalty_number)
+history_df$loyalty_number <- trimws(history_df$loyalty_number)
 
 # removing any NAs in loyalty_number
 flights <- flights %>% filter(!is.na(loyalty_number))
-history <- history %>% filter(!is.na(loyalty_number))
+history_df <- history_df %>% filter(!is.na(loyalty_number))
 
 # now join
-joined <- inner_join(flights, history, by = "loyalty_number")
+joined <- inner_join(flights, history_df, by = "loyalty_number")
 
-View(joined)
+head(joined, 150)
 
 
 # apply more transformations

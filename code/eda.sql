@@ -105,3 +105,71 @@ from `airline.history`
 where cancellation_year != 0
 group by 1
 order by 1 asc
+
+-- total number of rows
+with total as (
+  select count(*) as total_rows
+  from `airline.history`
+),
+
+by_city as (
+  select
+    city,
+    count(case when salary = 0 then 1 end) as salary_zeros,
+    round(count(case when salary = 0 then 1 end) / total.total_rows * 100, 2) as pct_of_total_rows
+  from `airline.history`, total
+  group by city, total.total_rows
+),
+
+by_education as (
+  select
+    education,
+    count(case when salary = 0 then 1 end) as salary_zeros,
+    round(count(case when salary = 0 then 1 end) / total.total_rows * 100, 2) as pct_of_total_rows
+  from `airline.history`, total
+  group by education, total.total_rows
+),
+
+by_marital_status as (
+  select
+    marital_status,
+    count(case when salary = 0 then 1 end) as salary_zeros,
+    round(count(case when salary = 0 then 1 end) / total.total_rows * 100, 2) as pct_of_total_rows
+  from `airline.history`, total
+  group by marital_status, total.total_rows
+),
+
+by_loyalty_card as (
+  select
+    loyalty_card,
+    count(case when salary = 0 then 1 end) as salary_zeros,
+    round(count(case when salary = 0 then 1 end) / total.total_rows * 100, 2) as pct_of_total_rows
+  from `airline.history`, total
+  group by loyalty_card, total.total_rows
+),
+
+by_clv as (
+  select
+    clv,
+    count(case when salary = 0 then 1 end) as salary_zeros,
+    round(count(case when salary = 0 then 1 end) / total.total_rows * 100, 2) as pct_of_total_rows
+  from `airline.history`, total
+  group by clv, total.total_rows
+)
+
+-- now select from each individual table
+select * from by_city order by pct_of_total_rows desc;
+-- select * from by_education order by pct_of_total_rows desc;
+-- select * from by_marital_status order by pct_of_total_rows desc;
+-- select * from by_loyalty_card order by pct_of_total_rows desc;
+-- select * from by_clv order by pct_of_total_rows desc;
+
+
+select *
+from `airline.history`
+where salary = 0
+and education != 'College'
+
+
+
+
