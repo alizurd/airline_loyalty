@@ -239,7 +239,8 @@ test_data <- joined[-train_index, ] # uses the remaining 30% to use to test the 
 
 x_train <- model.matrix(churned ~ loyalty_card
                    + sqrt_total_flights + log_distance + log_points_accumulated 
-                   + log_points_redeemed + log_dollar_cost_points_redeemed,
+                   + log_dollar_cost_points_redeemed + log_clv
+                   + education + marital_status + cancellation_year,
                    data = train_data) [, -1]
 
 y_train <- train_data$churned
@@ -250,9 +251,10 @@ churn_model_tran <- glmnet(x_train, y_train, family = "binomial"
                     , weights = weights)
 
 x_test <- model.matrix(churned ~ loyalty_card
-                       + sqrt_total_flights + log_distance + log_points_accumulated 
-                       + log_points_redeemed + log_dollar_cost_points_redeemed, 
-                       data = test_data)[, -1]
+                   + sqrt_total_flights + log_distance + log_points_accumulated 
+                   + log_dollar_cost_points_redeemed + log_clv
+                   + education + marital_status + cancellation_year,
+                   data = test_data) [, -1]
 
 # evaluate
 
@@ -263,6 +265,8 @@ test_data$predicted_prob <- as.numeric(as.character(test_data$predicted_prob))
 
 # 2. Classify based on threshold
 test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.3, 1, 0)
+
+coef(churn_model_tran, s = "lambda.min")
 
 # 3. ROC Curve 
 roc_obj <- roc(test_data$churned, test_data$predicted_prob)
