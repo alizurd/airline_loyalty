@@ -3,11 +3,12 @@
 
 # install all necessary packages
 
-install.packages("janitor")
-install.packages("lattice")
-install.packages("PRROC")
-install.packages("party")
-install.packages("DT")
+# install.packages("janitor")
+# install.packages("lattice")
+# install.packages("PRROC")
+# install.packages("pROC")
+# install.packages("party")
+# install.packages("DT")
 
 library(janitor)
 library(moments)
@@ -44,7 +45,6 @@ history_df <- history_df %>% filter(!is.na(loyalty_number))
 # any(duplicated(flights$loyalty_number))
 # any(duplicated(history_df$loyalty_number))
 
-
 history_df <- history_df %>%
 mutate(
   salary = ifelse(education == "College" & salary == 0, NA, salary)
@@ -58,7 +58,6 @@ mutate(
   salary)
 ) %>%
 ungroup()
-
 
 # there are multiple rows of customer data so i am counting unique month/ year combos, and years, and aggregating all other numeric cols
 flights <- flights %>%
@@ -87,12 +86,10 @@ history_df <- history_df %>% filter(!is.na(loyalty_number))
 # now join
 joined <- inner_join(flights, history_df, by = "loyalty_number")
 
-# glimpse(joined)
-
-
 # apply more transformations
 joined[is.na(joined)] <- 0 # change NA to 0 or NULL
 
+# decided to not drop salary rows anymore because there was a pattern in 0s
 # drop rows with salary == 0 
 # joined <- joined %>% 
 #   filter (salary != 0) %>%
@@ -101,7 +98,6 @@ joined[is.na(joined)] <- 0 # change NA to 0 or NULL
 # summary(joined)
 
 joined$postal_code <- gsub(" ", "", joined$postal_code) # remove spaces from the postal codes
-
 
 
 # Transformation
@@ -166,17 +162,16 @@ joined <- joined %>%
 # applying log transformation on the following:
 # points_accumulated, points_redeemed, dollar_cost_points_redeemed, distance
 
-# let's see what that looks like
-joined$log_dollar_cost_points_redeemed <- log1p(joined$dollar_cost_points_redeemed)
-joined$log_points_accumulated <- log1p(joined$points_accumulated)
-joined$log_points_redeemed <- log1p(joined$points_redeemed)
-joined$log_dollar_cost_points_redeemed <- log1p(joined$dollar_cost_points_redeemed)
-joined$log_distance <- log1p(joined$distance)
-joined$log_salary <- log1p(joined$salary)
-joined$log_clv <- log1p(joined$clv)
-
-# square root transformation on total_flights column
-joined$sqrt_total_flights <- sqrt(log1p(joined$total_flights))
+joined <- join %>%
+mutate(
+      log_dollar_cost_poimts_redeemed = log1p(dollar_cost_points_redeemed),
+      log_points_accumulated <- log1p(points_accumulated),
+      log_points_redeemed <- log1p(points_redeemed),
+      log_distance <- log1p(distance),
+      log_salary <- log1p(salary),
+      log_clv <- log1p(clv),
+      sqrt_total_flights <- sqrt(total_flights)
+      ) 
 
 # View(joined)
 
@@ -184,9 +179,7 @@ joined$sqrt_total_flights <- sqrt(log1p(joined$total_flights))
 # ggplot(joined, aes(y=points_accumulated_t)) +
 #   geom_boxplot()
 
-
 # write.csv(joined, "clean_data.csv", row.names = FALSE)
-
 
 # Model
 
@@ -221,19 +214,17 @@ joined$sqrt_total_flights <- sqrt(log1p(joined$total_flights))
 # priority though is to move onto the ML part
 # question of the hour: how can we predict customer churn in the loyalty program?
 
-
 # churn_model <- glm(churned ~ gender + education + salary + marital_status + loyalty_card + clv 
 #                    + enrollment_year + total_flights + distance + points_accumulated + points_redeemed
 #                    + dollar_cost_points_redeemed, data = joined,
 #                    family = binomial
-  
-# )
+#                     )
 
 # summary(churn_model)
 
 # this is the glm model with transformed data
 
-set.seed(42)
+set.seed(123)
 train_index <- sample(1:nrow(joined), 0.8 * nrow(joined)) # samples 80% of the data to train the model
 train_data <- joined [train_index, ] # subsets the original data indicated in train_index
 test_data <- joined[-train_index, ] # uses the remaining 30% to use to test the model
@@ -244,23 +235,36 @@ test_data <- joined[-train_index, ] # uses the remaining 30% to use to test the 
 #                    data = train_data,
 #                    family = binomial)
 
-churn_model_tran <- glm(churned ~ loyalty_card
+# summary(churn_model_tran)
+
+x_train <- model.matrix(churned ~ loyalty_card
                    + sqrt_total_flights + log_distance + log_points_accumulated 
                    + log_points_redeemed + log_dollar_cost_points_redeemed,
-                   data = train_data,
-                   family = binomial)
+                   data = train_data) [, -1]
 
-summary(churn_model_tran)
+y_train <- train_data$churned
+
+weights <- ifelse(y_train == 1, 5, 1)
+
+churn_model_tran <- glmnet(x_train, y_train, family = "binomial"
+                    , weights = weights)
+
+x_test <- model.matrix(churned ~ loyalty_card
+                       + sqrt_total_flights + log_distance + log_points_accumulated 
+                       + log_points_redeemed + log_dollar_cost_points_redeemed, 
+                       data = test_data)[, -1]
 
 # evaluate
 
 # 1. Predict on test_data
-test_data$predicted_prob <- predict(churn_model_tran, newdata = test_data, type = "response")
+test_data$predicted_prob <- as.factor(predict(churn_model_tran, newx = x_test, type = "response", s = 0.01))
+test_data$predicted_prob <- as.numeric(as.character(test_data$predicted_prob))
+
 
 # 2. Classify based on threshold
-test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.2, 1, 0)
+test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.3, 1, 0)
 
-# 3. ROC Curve (make sure to use the correct column name)
+# 3. ROC Curve 
 roc_obj <- roc(test_data$churned, test_data$predicted_prob)
 auc_val <- auc(roc_obj)
 plot(roc_obj, col = "blue", main = paste("ROC Curve (AUC =", round(auc_val, 3), ")"))
@@ -271,19 +275,8 @@ table(Predicted = test_data$predicted_class, Actual = test_data$churned)
 # 5. Accuracy (this measures proportion correctly predicted)
 mean(test_data$predicted_class == test_data$churned)
 
-library(PRROC)
+# library(PRROC)
 pr <- pr.curve(scores.class0 = test_data$predicted_prob[test_data$churned == 1],
                scores.class1 = test_data$predicted_prob[test_data$churned == 0],
                curve = TRUE)
 plot(pr)
-
-
-# next steps:
-# continue to refine the model
-  # clean the data better
-  # different ways to validate model accuracy
-  # set.seed = allows you to train a small portion of the data to the model = ML 
-#   figure out ways we can cut less data during the cleaning process
-#   data viz + storytelling!
-
-
