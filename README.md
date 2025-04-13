@@ -2,6 +2,8 @@
 
 The primary purpose of this project is to determine what causes customers to churn out of a *fictional* airlines loyalty program. secondary analyses include uncovering predictors of clv (customer lifetime value) and relationships between variables in the data.
 
+Check out the Github Page for a detailed breakdown of process and outputs --> https://alizurd.github.io/airline_loyalty/
+
 ## flights file
 | Column        | Description   |
 | ------------- | ------------- |
