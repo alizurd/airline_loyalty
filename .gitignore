@@ -16,7 +16,6 @@ renv/python/
 
 # Raw and processed data
 data/
-*.csv
 *.rds
 *.xlsx
 

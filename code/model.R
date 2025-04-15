@@ -105,7 +105,7 @@ joined$postal_code <- gsub(" ", "", joined$postal_code) # remove spaces from the
 joined <- joined %>%
   mutate(churned = ifelse(cancellation_year > 0, 1, 0))
 
-# write.csv(joined, "full_airlines_dataset.csv", row.names = FALSE)
+write.csv(joined, "full_airlines_dataset.csv", row.names = FALSE)
 
 joined <- joined %>%
   mutate(country = as.factor(country),
