@@ -14,11 +14,6 @@
 renv/library/
 renv/python/
 
-# Raw and processed data
-data/
-*.rds
-*.xlsx
-
 # Model output
 output/
 *.sav
