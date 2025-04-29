@@ -183,106 +183,195 @@ mutate(
 
 # write.csv(joined, "clean_data.csv", row.names = FALSE)
 
-# Model
+# Correlation analysis
+library(corrplot)
+predictor_vars <- train_data %>% 
+  select(loyalty_card, sqrt_total_flights, log_distance, log_points_accumulated,
+         log_dollar_cost_points_redeemed, log_clv) %>%
+  as.data.frame()
 
-# linear model with log data
-# log_model <- lm(
-#   clv ~ gender + education + marital_status + loyalty_card + enrollment_type + 
-#     total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
-#     + salary,
-#   data = joined
-# )
+cor_matrix <- cor(predictor_vars, use = "complete.obs")
+corrplot(cor_matrix, method = "circle", type = "upper", 
+         tl.col = "black", tl.srt = 45, diag = FALSE)
 
-# summary(log_model)
+# VIF analysis (if no severe multicollinearity)
+library(car)
+vif_model <- glm(churned ~ loyalty_card + sqrt_total_flights + log_distance + 
+                 log_points_accumulated + log_dollar_cost_points_redeemed + 
+                 log_clv + education + marital_status + cancellation_year,
+                 data = train_data, family = binomial)
+vif_values <- vif(vif_model)
+print(vif_values)
 
-# # lm with untransformed data
-# model <- lm(
-#   clv ~ gender + education + province + marital_status + salary+ loyalty_card + enrollment_type + 
-#     total_flights + distance + enrollment_year + cancellation_year + points_accumulated + points_redeemed
-#     + cancellation_month + cancellation_year,
-#   data = joined
-# )
 
-# # model summary
-# summary(model)
+# GLM model with transformed data
 
-# as a followup, would be interesting to see the relationship between salary and other variables..
+library(tidymodels)
+library(glmnet)
+library(pROC)
+library(PRROC)
 
-# salary_model <- lm(salary ~ loyalty_card + marital_status + enrollment_month
-#                    + total_flights, data = joined
-#                    )
-
-# next steps: continue refining, it's possible i cut too much of the data
-# priority though is to move onto the ML part
-# question of the hour: how can we predict customer churn in the loyalty program?
-
-# churn_model <- glm(churned ~ gender + education + salary + marital_status + loyalty_card + clv 
-#                    + enrollment_year + total_flights + distance + points_accumulated + points_redeemed
-#                    + dollar_cost_points_redeemed, data = joined,
-#                    family = binomial
-#                     )
-
-# summary(churn_model)
-
-# this is the glm model with transformed data
-
+# Set seed for reproducibility
 set.seed(123)
-train_index <- sample(1:nrow(joined), 0.8 * nrow(joined)) # samples 80% of the data to train the model
-train_data <- joined [train_index, ] # subsets the original data indicated in train_index
-test_data <- joined[-train_index, ] # uses the remaining 30% to use to test the model
 
-# churn_model_tran <- glm(churned ~ gender + education + log_salary + marital_status + loyalty_card + log_clv 
-#                    + enrollment_year + sqrt_total_flights + log_distance + log_points_accumulated 
-#                    + log_points_redeemed + log_dollar_cost_points_redeemed,
-#                    data = train_data,
-#                    family = binomial)
+# Split data into training and test sets
+train_index <- sample(1:nrow(joined), 0.8 * nrow(joined))
+train_data <- joined[train_index, ]
+test_data <- joined[-train_index, ]
 
-# summary(churn_model_tran)
+# Create bootstrap samples for potential cross-validation
+set.seed(234)
+boot_data <- bootstraps(train_data, strata = churned)
 
+# Create model matrix for predictors (excluding intercept)
 x_train <- model.matrix(churned ~ loyalty_card
                    + sqrt_total_flights + log_distance + log_points_accumulated 
                    + log_dollar_cost_points_redeemed + log_clv
                    + education + marital_status + cancellation_year,
-                   data = train_data) [, -1]
+                   data = train_data)[, -1]
 
 y_train <- train_data$churned
 
-weights <- ifelse(y_train == 1, 5, 1)
+# Apply class weights to address imbalance
+weights <- ifelse(y_train == 1, 8, 1)
 
-churn_model_tran <- glmnet(x_train, y_train, family = "binomial"
-                    , weights = weights)
+# Fit regularized logistic regression model using glmnet
+# Use cross-validation to choose the optimal lambda
+set.seed(345)
+cv_model <- cv.glmnet(x_train, y_train, family = "binomial", 
+                     weights = weights, alpha = 0.5) # Using elastic net (alpha=0.5)
 
+# Display the optimal lambda values
+print(paste("Lambda min:", cv_model$lambda.min))
+print(paste("Lambda 1se:", cv_model$lambda.1se))
+
+# Fit final model with optimal lambda
+churn_model_tran <- glmnet(x_train, y_train, family = "binomial",
+                         weights = weights, alpha = 0.5)
+
+# Create test matrix
 x_test <- model.matrix(churned ~ loyalty_card
                    + sqrt_total_flights + log_distance + log_points_accumulated 
                    + log_dollar_cost_points_redeemed + log_clv
                    + education + marital_status + cancellation_year,
-                   data = test_data) [, -1]
+                   data = test_data)[, -1]
 
-# evaluate
+# Model evaluation
+# 1. Predict probabilities on test data
+test_data$predicted_prob <- predict(churn_model_tran, newx = x_test, 
+                                  type = "response", s = cv_model$lambda.min)[,1]
 
-# 1. Predict on test_data
-test_data$predicted_prob <- as.factor(predict(churn_model_tran, newx = x_test, type = "response", s = 0.01))
-test_data$predicted_prob <- as.numeric(as.character(test_data$predicted_prob))
+# 2. Display model coefficients
+print("Model coefficients:")
+coef_matrix <- as.matrix(coef(churn_model_tran, s = cv_model$lambda.min))
+coef_df <- data.frame(
+  Variable = rownames(coef_matrix),
+  Coefficient = coef_matrix[,1]
+)
+print(coef_df[order(abs(coef_df$Coefficient), decreasing = TRUE),])
 
+# 3. Evaluate different probability thresholds
+thresholds <- seq(0.1, 0.9, by = 0.1)
+results <- data.frame(
+  Threshold = thresholds,
+  Accuracy = numeric(length(thresholds)),
+  Sensitivity = numeric(length(thresholds)),
+  Specificity = numeric(length(thresholds)),
+  F1_Score = numeric(length(thresholds))
+)
 
-# 2. Classify based on threshold
-test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.3, 1, 0)
+for (i in 1:length(thresholds)) {
+  threshold <- thresholds[i]
+  test_data$predicted_class <- ifelse(test_data$predicted_prob > threshold, 1, 0)
+  
+  # Confusion matrix elements
+  cm <- table(Predicted = test_data$predicted_class, Actual = test_data$churned)
+  
+  # Calculate metrics (handling potential division by zero)
+  tp <- ifelse(length(cm) == 4, cm[2,2], 0)
+  tn <- ifelse(length(cm) == 4, cm[1,1], ifelse(all(test_data$churned == 0), sum(test_data$predicted_class == 0), 0))
+  fp <- ifelse(length(cm) == 4, cm[2,1], sum(test_data$predicted_class == 1))
+  fn <- ifelse(length(cm) == 4, cm[1,2], sum(test_data$predicted_class == 0))
+  
+  results$Accuracy[i] <- (tp + tn) / (tp + tn + fp + fn)
+  results$Sensitivity[i] <- ifelse(tp + fn > 0, tp / (tp + fn), 0)  # Recall/True Positive Rate
+  results$Specificity[i] <- ifelse(tn + fp > 0, tn / (tn + fp), 0)  # True Negative Rate
+  precision <- ifelse(tp + fp > 0, tp / (tp + fp), 0)
+  results$F1_Score[i] <- ifelse(precision + results$Sensitivity[i] > 0, 
+                               2 * precision * results$Sensitivity[i] / (precision + results$Sensitivity[i]), 0)
+}
 
-coef(churn_model_tran, s = "lambda.min")
+# Display threshold analysis results
+print("Threshold Analysis:")
+print(results)
 
-# 3. ROC Curve 
+# Choose the optimal threshold based on F1 score
+best_threshold_idx <- which.max(results$F1_Score)
+best_threshold <- results$Threshold[best_threshold_idx]
+print(paste("Best threshold based on F1 score:", best_threshold))
+
+# Apply best threshold
+test_data$predicted_class <- ifelse(test_data$predicted_prob > best_threshold, 1, 0)
+
+# 4. ROC Curve and AUC
 roc_obj <- roc(test_data$churned, test_data$predicted_prob)
 auc_val <- auc(roc_obj)
+
+# 5. Confusion Matrix with best threshold
+conf_matrix <- table(Predicted = test_data$predicted_class, Actual = test_data$churned)
+print("Confusion Matrix:")
+print(conf_matrix)
+
+# 6. Comprehensive performance metrics
+tp <- conf_matrix[2,2]
+tn <- conf_matrix[1,1]
+fp <- conf_matrix[2,1]
+fn <- conf_matrix[1,2]
+
+accuracy <- (tp + tn) / (tp + tn + fp + fn)
+precision <- tp / (tp + fp)
+recall <- tp / (tp + fn)  # Same as sensitivity
+f1 <- 2 * precision * recall / (precision + recall)
+specificity <- tn / (tn + fp)
+
+print(paste("Accuracy:", round(accuracy, 3)))
+print(paste("Precision:", round(precision, 3)))
+print(paste("Recall/Sensitivity:", round(recall, 3)))
+print(paste("Specificity:", round(specificity, 3)))
+print(paste("F1 Score:", round(f1, 3)))
+print(paste("AUC:", round(auc_val, 3)))
+
+# 7. Visualizations
+# ROC Curve
+pdf("roc_curve.pdf")
 plot(roc_obj, col = "blue", main = paste("ROC Curve (AUC =", round(auc_val, 3), ")"))
+abline(a = 0, b = 1, lty = 2, col = "gray")
+dev.off()
 
-# 4. Confusion Matrix (on test set, not joined)
-table(Predicted = test_data$predicted_class, Actual = test_data$churned)
-
-# 5. Accuracy (this measures proportion correctly predicted)
-mean(test_data$predicted_class == test_data$churned)
-
-# library(PRROC)
+# PR Curve
 pr <- pr.curve(scores.class0 = test_data$predicted_prob[test_data$churned == 1],
                scores.class1 = test_data$predicted_prob[test_data$churned == 0],
                curve = TRUE)
-plot(pr)
+pdf("pr_curve.pdf")
+plot(pr, main = paste("PR Curve (AUC =", round(pr$auc.integral, 3), ")"))
+dev.off()
+
+# 8. Feature importance visualization
+coef_df <- coef_df[order(abs(coef_df$Coefficient), decreasing = TRUE),]
+coef_df <- coef_df[coef_df$Variable != "(Intercept)",]  # Remove intercept for visualization
+
+pdf("feature_importance.pdf")
+barplot(abs(coef_df$Coefficient), 
+        names.arg = coef_df$Variable, 
+        horiz = TRUE, 
+        las = 1, 
+        cex.names = 0.7,
+        main = "Feature Importance (Absolute Coefficient Values)",
+        xlab = "Absolute Coefficient Value")
+dev.off()
+
+# 9. Save the model
+saveRDS(list(model = churn_model_tran, 
+             lambda = cv_model$lambda.min,
+             threshold = best_threshold), 
+        "churn_model.rds")
