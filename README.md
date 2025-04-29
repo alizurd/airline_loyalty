@@ -4,6 +4,10 @@ The primary purpose of this project is to determine what causes customers to chu
 
 Check out the Github Page for a detailed breakdown of process and outputs --> https://alizurd.github.io/airline_loyalty/
 
+## TODO
+
+Status: we've created a base model and are continuing to refine it, as well as EDA to derive interesting insights! more updates to come~~
+
 ## flights file
 | Column        | Description   |
 | ------------- | ------------- |
@@ -35,7 +39,3 @@ Check out the Github Page for a detailed breakdown of process and outputs --> ht
 | `enrollment_month`  | Month Member enrolled in membership program  |
 | `cancellation_year`  | Year Member cancelled their membership  |
 | `cancellation_month`  | Month Member cancelled their membership |
-
-## TODO
-
-Status: we've created a base model and are continuing to refine it, as well as EDA to derive interesting insights! more updates to come~~
