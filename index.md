@@ -22,5 +22,5 @@ The project looks to find predictors of churn in an airlines loyalty dataset.
 
 # Results
 
-Fit a logistic regression model using GLMNET using L1/L2 regularization to predict churners in an airlines loyalty program (dummy data) with 73% overall precision, and 92% precision for churners.
+Fit a logistic regression model using GLMNET using L1/L2 regularization to predict churners in an airlines loyalty program (dummy data) with 73% recall, and 92% precision for churners.
 
