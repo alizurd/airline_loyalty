@@ -26,12 +26,12 @@ Fit a logistic regression model using GLMNET using L1/L2 regularization to predi
 
 ## Key Metrics:
 
-Accuracy: 94.92%
-Sensitivity (Recall): 72.88%
-Specificity: 98.02%
-Precision: 83.84%
-F1 Score: 78% (at threshold 0.75)
-AUC: 0.923
+- Accuracy: 94.92%
+- Sensitivity (Recall): 72.88%
+- Specificity: 98.02%
+- Precision: 83.84%
+- F1 Score: 78% (at threshold 0.75)
+- AUC: 0.923
 
 ## Insights
 
@@ -43,6 +43,6 @@ The good news is we can now predict who's likely to churn before they do. High-r
 
 # Visualizations
 
-![Alt text](images/Corr.jpg)
-![Alt text](images/ROC.jpg)
-![Alt text](images/features.jpg)
+![Correlation](images/Corr.jpg)
+![ROC](images/ROC.jpg)
+![Features](images/features.jpg)
