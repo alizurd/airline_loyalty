@@ -43,6 +43,6 @@ The good news is we can now predict who's likely to churn before they do. High-r
 
 # Visualizations
 
-![Correlation](images/Corr.jpg)
-![ROC](images/ROC.jpg)
-![Features](images/features.jpg)
+![Correlation](images/Corr.png)
+![ROC](images/ROC.png)
+![Features](images/features.png)
