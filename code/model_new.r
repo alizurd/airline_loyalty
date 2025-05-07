@@ -235,7 +235,11 @@ coef_df <- coef_df[order(-coef_df$AbsCoefficient),]
 head(coef_df, 10)
 
 # Save model
-saveRDS(list(model = cv_model, threshold = best_threshold), "churn_model.rds")
+model <- saveRDS(list(model = cv_model, threshold = best_threshold), "churn_model.rds")
+
+# Save as CSV
+model <- readRDS("churn_model.rds")
+write.csv(df, "model.csv", row.names = FALSE)
 
 # Visualizations
 
