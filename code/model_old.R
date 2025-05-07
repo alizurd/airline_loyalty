@@ -205,22 +205,24 @@ test_data <- testing(split)
 View(train_data)
 
 # Correlation matrix (optional, for numeric predictors)
-predictors <- train_data %>%
-  select(sqrt_total_flights, log_distance, 
-         log_points_accumulated, log_dollar_cost_points_redeemed, log_clv) %>%
-  as.data.frame()
-corrplot(cor(predictors, use = "complete.obs"), method = "circle", type = "upper")
+# predictors <- train_data %>%
+#   select(sqrt_total_flights, log_distance, 
+#          log_points_accumulated, log_dollar_cost_points_redeemed, log_clv) %>%
+#   as.data.frame()
+
+# cor <- corrplot(cor(predictors, use = "complete.obs"), method = "circle", type = "upper")
+# ggsave("corrplot.png", plot = cor, width = 6, height = 4, dpi = 300))
 
 # dropped log_points_accumulated and sqrt_total_flights due to collinearity
 
 # table(train_data$churned, train_data$education)
 # table(train_data$churned, train_data$marital_status)
 
-train_data <- train_data %>%
-  mutate(education = fct_lump(education, n = 4),
-         marital_status = fct_lump(marital_status, n = 3))
+# train_data <- train_data %>%
+#   mutate(education = fct_lump(education, n = 4),
+#          marital_status = fct_lump(marital_status, n = 3))
 
-str(train_data)
+# str(train_data)
 
 train_data <- train_data %>%
   mutate(across(c(total_months, total_years), as.numeric))
@@ -234,11 +236,18 @@ train_data <- train_data %>%
 # print(vif(vif_model))
 
 # Remove leakage-prone columns
-train_clean <- train_data %>% select(-c(churned, cancellation_year, cancellation_month))
+train_clean <- train_data %>% select(-c(churned, cancellation_year, cancellation_month,
+                                        log_points_redeemed, dollar_cost_points_redeemed, sqrt_total_flights,
+                                        log_clv))
 x_train <- model.matrix(~ . -1, data = train_clean)
 y_train <- train_data$churned
 
-test_clean <- test_data %>% select(-c(churned, cancellation_year, cancellation_month))
+View(train_clean)
+
+test_clean <- train_data %>% select(-c(churned, cancellation_year, cancellation_month,
+                                        log_points_redeemed, log_dollar_cost_points_redeemed, sqrt_total_flights,
+                                        log_clv, distance, points_accumulated, points_redeemed,
+                                        salary, clv, log_points_accumulated))
 x_test <- model.matrix(~ . -1, data = test_clean)
 y_test <- test_data$churned
 
@@ -258,15 +267,21 @@ set.seed(345)
 cv_model <- cv.glmnet(x_train, y_train, family = "binomial", weights = weights, alpha = 1)
 
 # Predict on test set
-test_data$predicted_prob <- predict(cv_model, newx = x_test, s = "lambda.min", type = "response")[,1]
+test_clean$predicted_prob <- predict(cv_model, newx = x_test, s = "lambda.min", type = "response")[,1]
+
+test <- table(test_data$predicted_prob, test_data$churned)
+
 
 # Evaluate thresholds
 thresholds <- seq(0.1, 0.9, 0.1)
 results <- map_dfr(thresholds, function(thresh) {
   preds <- ifelse(test_data$predicted_prob > thresh, 1, 0)
   cm <- table(Pred = preds, Actual = test_data$churned)
-  tp <- cm["1", "1"]; tn <- cm["0", "0"]
-  fp <- cm["1", "0"]; fn <- cm["0", "1"]
+  tp <- cm[2, 2]  # Predicted 1, Actual 1
+  tn <- cm[1, 1]  # Predicted 0, Actual 0
+  fp <- cm[2, 1]  # Predicted 1, Actual 0
+  fn <- cm[1, 2]  # Predicted 0, Actual 1
+
   
   precision <- ifelse(tp + fp > 0, tp / (tp + fp), 0)
   recall <- ifelse(tp + fn > 0, tp / (tp + fn), 0)
@@ -278,6 +293,12 @@ results <- map_dfr(thresholds, function(thresh) {
          Specificity = specificity, F1_Score = f1)
 })
 
+print(cm)
+
+summary(test_clean$predicted_prob)
+hist(test_clean$predicted_prob, breaks = 30)
+
+
 # Choose best threshold
 best_threshold <- results$Threshold[which.max(results$F1_Score)]
 
@@ -286,8 +307,8 @@ test_data$predicted_class <- ifelse(test_data$predicted_prob > best_threshold, 1
 roc_obj <- roc(test_data$churned, test_data$predicted_prob)
 auc_val <- auc(roc_obj)
 
-print(roc_obj)
-print(auc_val)
+plot(roc_obj)
+plot(auc_val)
 
 # Confusion matrix
 cm <- table(Predicted = test_data$predicted_class, Actual = test_data$churned)
