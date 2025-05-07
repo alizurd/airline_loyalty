@@ -255,7 +255,7 @@ weights <- ifelse(y_train == 1, 8, 1)
 
 # Train model
 set.seed(345)
-cv_model <- cv.glmnet(x_train, y_train, family = "binomial", weights = weights, alpha = 0.5)
+cv_model <- cv.glmnet(x_train, y_train, family = "binomial", weights = weights, alpha = 1)
 
 # Predict on test set
 test_data$predicted_prob <- predict(cv_model, newx = x_test, s = "lambda.min", type = "response")[,1]
