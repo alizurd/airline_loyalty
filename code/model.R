@@ -233,13 +233,22 @@ train_data <- train_data %>%
 #                  family = binomial)
 # print(vif(vif_model))
 
-# Train data
-x_train <- model.matrix(churned ~ . -1, data = train_data)
+# Remove leakage-prone columns
+train_clean <- train_data %>% select(-c(churned, cancellation_year, cancellation_month))
+x_train <- model.matrix(~ . -1, data = train_clean)
 y_train <- train_data$churned
 
-# Test data
-x_test <- model.matrix(~ . -1, data = test_data %>% select(-churned))
+test_clean <- test_data %>% select(-c(churned, cancellation_year, cancellation_month))
+x_test <- model.matrix(~ . -1, data = test_clean)
 y_test <- test_data$churned
+
+# Train data
+# x_train <- model.matrix(churned ~ . -1, data = train_data)
+# y_train <- train_data$churned
+
+# Test data
+# x_test <- model.matrix(~ . -1, data = test_data %>% select(-churned))
+# y_test <- test_data$churned
 
 # Class weights
 weights <- ifelse(y_train == 1, 8, 1)
