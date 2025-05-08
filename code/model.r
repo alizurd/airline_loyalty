@@ -241,6 +241,10 @@ model <- saveRDS(list(model = cv_model, threshold = best_threshold), "churn_mode
 model <- readRDS("churn_model.rds")
 write.csv(df, "model.csv", row.names = FALSE)
 
+obj <- readRDS("churn_model.rds")
+str(obj)
+
+
 # Visualizations
 
 # feature importance visualization
