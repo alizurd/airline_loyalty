@@ -1,0 +1,15 @@
+"feature","importance"
+"(Intercept)",8.18665066880839
+"educationHigh School or Below",-0.157138267214233
+"loyalty_cardStar",-0.0186342739638205
+"enrollment_typeStandard",-4.14029064385785
+"enrollment_year2013",2.45697228422828
+"enrollment_year2014",2.56186986075401
+"enrollment_year2015",2.56174974624992
+"enrollment_year2016",2.72978068430202
+"enrollment_year2017",2.13677578853293
+"enrollment_year2018",-1.18184387765718
+"enrollment_month",-0.072393535454472
+"total_months",-0.0908596706460455
+"total_years",-0.357805566695347
+"total_flights",-0.130048851943915

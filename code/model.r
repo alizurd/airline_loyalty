@@ -115,7 +115,6 @@ train_data <- training(split)
 test_data <- testing(split)
 
 # IMPORTANT: Remove leakage-prone columns BEFORE modeling
-# Remove direct leakage (cancellation columns) and transformed versions of the same data
 model_vars <- train_data %>% 
   select(
     # Keep demographic features
@@ -234,15 +233,41 @@ coef_df <- coef_df[order(-coef_df$AbsCoefficient),]
 # Print top features
 head(coef_df, 10)
 
-# Save model
-model <- saveRDS(list(model = cv_model, threshold = best_threshold), "churn_model.rds")
+# Read the model
+model_obj <- readRDS("churn_model.rds")
 
-# Save as CSV
-model <- readRDS("churn_model.rds")
-write.csv(df, "model.csv", row.names = FALSE)
+x_test <- model.matrix(model_formula, data = test_vars)[,-1]
 
-obj <- readRDS("churn_model.rds")
-str(obj)
+# Generate predictions using the correct parameter format
+predictions <- predict(model_obj$model, 
+                      newx = x_test, 
+                      s = "lambda.1se", # Using the same lambda you trained with
+                      type = "response") # Get probabilities for churn
+
+# Create a dataframe with predictions and relevant features for Dashboarding
+prediction_df <- data.frame(
+  id = test_data$loyalty_number,
+  churn_probability = as.numeric(predictions),
+  predicted_churn = as.numeric(predictions > model_obj$threshold)
+)
+
+# Add important features from test_data that might be useful for visualization
+prediction_df <- cbind(prediction_df, test_data[, c("gender", "salary", "education", "total_flights", "enrollment_year", "city", "points_accumulated", "points_redeemed")])
+
+# Export to CSV 
+write.csv(prediction_df, "churn_predictions.csv", row.names = FALSE)
+
+# Also export the feature importance data for visualization
+coefficients <- as.matrix(coef(model_obj$model, s = "lambda.1se"))
+coef_df <- data.frame(
+  feature = rownames(coefficients),
+  importance = as.numeric(coefficients)
+)
+coef_df <- coef_df[coef_df$importance != 0, ]  # Remove zero coefficients
+coef_df <- coef_df[order(-abs(coef_df$importance)), ]  # Sort by absolute importance
+
+# Export coefficients for Tableau
+write.csv(coef_df, "model_coefficients.csv", row.names = FALSE)
 
 
 # Visualizations
