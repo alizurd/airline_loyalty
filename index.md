@@ -12,7 +12,7 @@ Used a dummy airline loyalty program dataset to uncover predictors of churn usin
 
 # Executive Summary
  
-People who earn points but never use them aren't seeing value in staying. Flight frequency is another big predictor of churn. Occasional flyers are more likely to leave the program. The length of someone's membership makes a difference in their loyalty; people who signed up earlier are less likely to leave.
+This analysis identified key drivers of churn in the loyal program. Customers who earn points but never use them don't see value in staying. Flight frequency is another big predictor of churn. Occasional flyers are more likely to leave the loyalty program. The length of someone's membership makes a difference in their loyalty; people who signed up earlier are less likely to leave.
 
 # Methods
 
@@ -29,7 +29,7 @@ Fit a logistic regression model using GLMNET using L1/L2 regularization to predi
 
 ## Recommendations
 
-The good news is we can now predict who's likely to churn before they do. High-risk members can be sent targeted offers that can remind them to use their points and provide additional promotions to help them utilize the benefits of the program!
+Because of our model, we can predict who's likely to churn before they do. High-risk members can be sent targeted offers that can remind them to use their points and provide additional promotions to help them utilize the benefits of the program!
 
 # Visualizations
 
