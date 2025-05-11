@@ -8,7 +8,7 @@ Exploring churn patterns using GLMNET
 
 # Background
 
-Used a dummy airline loyalty program dataset to uncover predictors of churn using a logistic regression machine learning model.
+Used a dummy airline loyalty program dataset to uncover predictors of churn using a logistic regression machine learning model. Check out the dashboard [here](https://public.tableau.com/app/profile/alyssa.bueno/viz/ChurnPredictionsforAirlineLoyaltyProgram/Dashboard1)!
 
 # Executive Summary
  
