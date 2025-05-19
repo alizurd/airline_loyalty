@@ -37,15 +37,6 @@ history_df <- history_df %>%
   ) %>%
   ungroup()
 
-history_df <- history_df %>%
-  group_by(city) %>% 
-  mutate(
-    salary = ifelse(is.na(salary),
-                   median(salary, na.rm = TRUE),
-                   salary)
-  ) %>%
-  ungroup()
-
 # Aggregate flight data
 flights <- flights %>%
   group_by(loyalty_number) %>%
