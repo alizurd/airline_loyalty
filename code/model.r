@@ -21,11 +21,21 @@ flights <- clean_names(flights)
 flights <- flights %>% filter(!is.na(loyalty_number))
 history_df <- history_df %>% filter(!is.na(loyalty_number))
 
-# Handle missing salaries
+# Replace salary of 0 with NA (if college educated)
 history_df <- history_df %>%
+  mutate(salary = ifelse(education == "College" & salary == 0, NA, salary))
+
+# Fill in NA salaries with the median salary by zip code
+history_df <- history_df %>%
+  group_by(postal_code) %>%
   mutate(
-    salary = ifelse(education == "College" & salary == 0, NA, salary)
-  )
+    salary = ifelse(
+      is.na(salary),
+      median(salary, na.rm = TRUE),
+      salary
+    )
+  ) %>%
+  ungroup()
 
 history_df <- history_df %>%
   group_by(city) %>% 
