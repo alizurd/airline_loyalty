@@ -6,7 +6,7 @@ Check out the Github Page for a detailed breakdown of process and outputs --> ht
 
 ## TODO
 
-Status: we've created a base model and are continuing to refine it, as well as EDA to derive interesting insights! more updates to come~~
+Status: we've created a model to predict users who will churn based on key indicators. The writeup and dashboard with our learnings are linked above
 
 ## flights file
 | Column        | Description   |
