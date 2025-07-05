@@ -8,13 +8,16 @@ Exploring churn patterns using GLMNET
 
 # Background
 
-Used a dummy airline loyalty program dataset to uncover predictors of churn using a logistic regression machine learning model. Check out the dashboard [here](https://public.tableau.com/app/profile/alyssa.bueno/viz/ChurnPredictionsforAirlineLoyaltyProgram/Dashboard1)!
+Used a dummy airline loyalty program dataset to uncover predictors of churn using a logistic regression machine learning model. Check out the dashboard [here](https://public.tableau.com/app/profile/alyssa.bueno/viz/ChurnPredictionsforAirlineLoyaltyProgram/Dashboard1#1)!
 
 # Executive Summary
  
-This analysis identified key drivers of churn in the loyal program. Customers who earn points but never use them don't see value in staying. Flight frequency is another big predictor of churn. Occasional flyers are more likely to leave the loyalty program. The length of someone's membership makes a difference in their loyalty; people who signed up earlier are less likely to leave.
+This analysis identified key drivers of churn in a loyalty program. A few insights: 
+Customers who accumulate points but do not use them have a higher risk of leaving since they are not utilizing their rewards. Relatedly, flight frequency is another big predictor of churn. Occasional flyers are more likely to leave the loyalty program. Finally, the length of someone's membership makes a difference in their loyalty; people who signed up prior to 2018 are less likely to leave.
 
 # Methods
+
+Data cleaning - imputed salaries based on median salary in residing city
 
 Fit a logistic regression model using GLMNET using L1/L2 regularization to predict churners in an airlines loyalty program (dummy data) with 73% recall, 84% precision, and 95% overall accuracy.
 
@@ -29,7 +32,7 @@ Fit a logistic regression model using GLMNET using L1/L2 regularization to predi
 
 ## Recommendations
 
-Because of our model, we can predict who's likely to churn before they do. High-risk members can be sent targeted offers that can remind them to use their points and provide additional promotions to help them utilize the benefits of the program!
+Because of our model, we can predict the likelihood of a user churning based on demographic and behavioral traits. To improve retention, high-risk members can be sent targeted offers that can remind them to use their points and provide additional promotions to help them utilize the benefits of the program.
 
 # Visualizations
 
