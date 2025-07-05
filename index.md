@@ -36,10 +36,10 @@ Because of our model, we can predict the likelihood of a user churning based on 
 
 # Visualizations
 
+- the top predictor of churn is enrollment_typeStandard, with a strong negative coefficient, meaning users on this plan are significantly less likely to churn. enrollment_years 2014–2016 have the highest positive coefficients, indicating those cohorts are at greater churn risk compared to the reference year.
+
 ![Correlation](images/Corr.png)
 ![ROC](images/ROC.png)
-
-- the top predictor of churn is enrollment_typeStandard, with a strong negative coefficient, meaning users on this plan are significantly less likely to churn. enrollment_years 2014–2016 have the highest positive coefficients, indicating those cohorts are at greater churn risk compared to the reference year.
 
 - features like total_years, total_flights, and education level show smaller but consistent associations—users with more tenure, more flights, or higher education tend to be slightly more retained. overall, plan type and cohort year are the most influential drivers in the model.
 
